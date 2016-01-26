@@ -4,6 +4,29 @@ $(function(){
         Slider($(this));
     });
 
+    $.widget( "custom.iconselectmenu", $.ui.selectmenu, {
+        _renderItem: function( ul, item ) {
+            var li = $( "<li>", { text: item.label } );
+
+            if ( item.disabled ) {
+                li.addClass( "ui-state-disabled" );
+            }
+
+            $( "<span>", {
+                style: item.element.attr( "data-style" ),
+                "class": "ui-icon " + item.element.attr( "data-class" )
+            })
+                .appendTo( li );
+
+            return li.appendTo( ul );
+        }
+    });
+
+    $( ".discount__languadge" )
+        .iconselectmenu()
+        .iconselectmenu( "menuWidget")
+        .addClass( "ui-menu-icons flag" );
+
     start = $(".site__header").offset().top + $(".site__header").outerHeight();
     navigation();
 

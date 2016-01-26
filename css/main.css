@@ -18,14 +18,23 @@
 
 /* --------------- placeholder --------------- */
 ::-webkit-input-placeholder {
-    color: #000;
+    color: #ccc;
+    -webkit-transition: color 300ms ease-in-out;
 }
 :-moz-placeholder {
-    color: #000;
+    color: #ccc;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
 .placeholder {
-    color: #000;
+    color: #ccc;
+    -webkit-transition: color 300ms ease-in-out;
+    transition: color 300ms ease-in-out;
 }
+:focus::-webkit-input-placeholder {color: transparent}
+:focus::-moz-placeholder          {color: transparent}
+:focus:-moz-placeholder           {color: transparent}
+:focus:-ms-input-placeholder      {color: transparent}
 /* --------------- /placeholder --------------- */
 
 /* --------------- site --------------- */
@@ -151,6 +160,8 @@
 .btn{
     display: inline-block;
     border-radius: 5px;
+    border: none;
+    font: 15px 'Fira Sans', sans-serif;
     cursor: pointer;
 }
 .btn_header{
@@ -207,6 +218,20 @@
 }
 .btn_1:hover span:before{
     opacity: 0;
+}
+.btn_discount{
+    padding: 7px 54px 7px 49px;
+    color: #465863;
+    font-weight: 500;
+    background-color: #ffd400;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.btn_discount:hover{
+    background-color: #ffdd5d;
+}
+.btn_discount:active{
+    background-color: #f7ca1f;
 }
 /* --------------- /btn --------------- */
 
@@ -329,13 +354,32 @@
 }
 .promo__content{
     width: 304px;
+    padding-top: 64px;
+    line-height: 23px;
 }
 .promo__title{
+    margin-bottom: 19px;
     font-size: 30px;
     font-weight: normal;
+    line-height: 38px;
+    letter-spacing: -1px;
 }
 .promo__title span{
     font-size: 50px;
+}
+.promo__text{
+    margin-bottom: 23px;
+}
+.promo__more{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    font-weight: 600;
+    transition: color .3s ease, border-bottom-color .3s ease;
+    -webkit-transition: color .3s ease, border-bottom-color .3s ease;
+}
+.promo__more:hover{
+    color: #fed330;
+    border-bottom-color: transparent;
 }
 /* --------------- /promo --------------- */
 
@@ -344,6 +388,14 @@
     height: 154px;
     margin-bottom: 69px;
     background-color: #ffd400;
+}
+.enroll > div{
+    position: relative;
+}
+.enroll__form{
+    position: absolute;
+    top: 54px;
+    right: 0;
 }
 /* --------------- /enroll --------------- */
 
@@ -593,8 +645,88 @@
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4f59', endColorstr='#598da2',GradientType=0 );
     text-align: center;
 }
+.discount fieldset{
+    display: inline-block;
+    width: 228px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.discount label{
+    display: block;
+    color: #65828f;
+}
+.discount input{
+    width: 100%;
+    height: 44px;
+    padding: 0 10px;
+    border: 3px solid #18baea;
+    border-radius: 5px;
+    font: 15px 'Fira Sans', sans-serif;
+    text-align: center;
+}
+.discount .ui-selectmenu-button{
+    position:relative;
+    display:inline-block;
+    width:230px!important;
+    margin-top:15px;
+    border:2px solid #99bbdb;
+    line-height:39px;
+}
+.discount .ui-selectmenu-text{
+    width:180px;
+    padding:0 30px 0 10px;
+    font-size:16px;
+    line-height:39px;
+}
+.discount .ui-selectmenu-button .ui-icon{
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    width:20px;
+    background:url(../img/ico_control.png) no-repeat 0 -27px;
+    cursor:pointer;
+}
+.discount .ui-corner-top .ui-icon{
+    background-position:0 16px
+}
+.ui-selectmenu-menu{
+    display:none;
+    position:absolute;
+    width:230px;
+    border:2px solid #99bbdb;
+    border-top:none;
+    background-color:#fff;
+    overflow:hidden;
+}
+.ui-selectmenu-menu li{
+    font-size:16px;
+    line-height:24px;
+    cursor:pointer;
+}
+.ui-selectmenu-menu .ui-state-focus{
+    background-color:#99bbdb
+}
+.ui-selectmenu-menu.ui-selectmenu-open{
+    display:block;
+    z-index: 5;
+}
+.discount .ui-selectmenu-text{
+    width:210px;
+    padding-right:20px;
+}
+.discount__form{
+    width: 480px;
+    margin: 0 auto;
+    text-align: justify;
+}
+.discount__form:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
 .discount__introduction{
-    margin: 0 184px 52px;
+    margin: 0 184px 40px;
     line-height: 24px;
 }
 /* --------------- /discount --------------- */
