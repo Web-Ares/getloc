@@ -98,9 +98,11 @@
     right: 0;
     bottom: 0;
     height: 300px;
+    padding-top: 61px;
     background-color: #3e4f59;
 }
 .site__footer-layout {
+    position: relative;
     width: 952px;
     height: 300px;
     margin: 0 auto;
@@ -580,6 +582,8 @@
 
 /* --------------- discount --------------- */
 .discount{
+    height: 630px;
+
     padding-top: 63px;
     color: #fff;
     background: rgb(62,79,89);
@@ -594,3 +598,72 @@
     line-height: 24px;
 }
 /* --------------- /discount --------------- */
+
+/* --------------- social --------------- */
+.social{
+    position: absolute;
+    right: 0;
+    top: -6px;
+}
+.social a{
+    display: inline-block;
+    width: 62px;
+    height: 62px;
+    margin-left: 6px;
+    border-radius: 100px;
+    background: url("../img/icons-social.png") no-repeat 0 0 #52616a;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.social a:hover{
+    background-color: #18baea;
+}
+a.social-vk{
+    background-position: 26px 50%;
+}
+a.social-fb{
+    background-position: -46px 50%;
+}
+a.social-ok{
+    background-position: -117px 50%;
+}
+/* --------------- /social --------------- */
+
+/* --------------- footer --------------- */
+.footer__logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.footer-menu{
+    position: absolute;
+    left: 241px;
+    top: 2px;
+}
+.footer-menu dl{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 71px;
+    color: #fff;
+}
+.footer-menu dt{
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.footer-menu dd{
+    line-height: 28px;
+}
+.footer-menu a{
+    display: block;
+}
+.footer-menu a span{
+    color: #a4adb3;
+    border-bottom: 1px solid transparent;
+    transition: color .3s ease, border-bottom-color.3s ease;
+    -webkit-transition: color .3s ease, border-bottom-color.3s ease;
+}
+.footer-menu a:hover span{
+    color: #fff;
+    border-bottom-color: #fff;
+}
+/* --------------- /footer --------------- */
