@@ -98,12 +98,12 @@ var FormValidation = function (obj) {
                             }
                         }
                         else if ( curAttr == "email" ){
-                            var curCheck = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);;
-                            if ( curItem.test(curCheck) ){
+                            var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
+                            if ( pattern.test('#discount__email') == false ){
                                 curItem.addClass("site__required-error");
                                 curItem.closest("fieldset").addClass('error');
                             }
-                            console.log('dddd')
+                            console.log(pattern.test('#discount__email'))
 
                         }
 
