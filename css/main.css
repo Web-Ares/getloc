@@ -86,15 +86,17 @@
 }
 .site__header-layout {
     position: relative;
-    width: 952px;
+    width: 992px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 .site__content {
     position: relative;
     z-index: 2;
 }
 .site__wrap{
-    width: 952px;
+    width: 992px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 .site__content-layout {
@@ -112,8 +114,9 @@
 }
 .site__footer-layout {
     position: relative;
-    width: 952px;
+    width: 992px;
     height: 300px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 .header-fix{
@@ -129,7 +132,7 @@
 .logo {
     position: absolute;
     top: 5px;
-    left: 0;
+    left: 20px;
 }
 /* --------------- /logo --------------- */
 
@@ -137,7 +140,7 @@
 .header__menu{
     position: absolute;
     top: 0;
-    right: 244px;
+    right: 264px;
 }
 .header__menu a{
     display: inline-block;
@@ -167,7 +170,7 @@
 .btn_header{
     position: absolute;
     top: 0;
-    right: 41px;
+    right: 61px;
     padding: 8px 34px;
     color: #fff;
     background-color: #3394c6;
@@ -263,7 +266,7 @@
 .language{
     position: absolute;
     top: 0;
-    right: 0;
+    right: 20px;
 }
 .language__btn{
     padding: 8px 6px 5px;
@@ -470,7 +473,7 @@
 .enroll__form{
     position: absolute;
     top: 54px;
-    right: 0;
+    right: 20px;
 }
 .enroll__email-box{
     display: inline-block;
@@ -756,8 +759,6 @@
 
 /* --------------- discount --------------- */
 .discount{
-    height: 630px;
-
     padding-top: 63px;
     color: #fff;
     background: rgb(62,79,89);
@@ -775,9 +776,11 @@
 }
 .discount label{
     display: block;
+    width: 228px;
     color: #65828f;
     transition: color .3s ease;
     -wbkit-transition: color .3s ease;
+    text-align: center;
 }
 .discount .focused label{
     color: #fff;
@@ -794,6 +797,9 @@
     -wbkit-transition: border-color .3s ease;
 }
 .discount .focused input{
+    border-color: #ff6353;
+}
+.discount input:invalid{
     border-color: #18baea;
 }
 fieldset.discount__language{
@@ -804,10 +810,11 @@ fieldset.discount__language{
     position:relative;
     display:inline-block;
     width:224px!important;
-    height: 44px;
+    height: 40px;
     border-radius: 5px;
     color: #333;
     background-color: #fff;
+    text-align: center;
 }
 .discount .ui-selectmenu-text{
     width:180px;
@@ -866,12 +873,19 @@ fieldset.discount__language{
     margin: 0 184px 40px;
     line-height: 24px;
 }
+.discount__languadge-add{
+    padding-left: 25px;
+    font-size: 15px;
+    border: none;
+    background: none;
+    color: #fff;
+}
 /* --------------- /discount --------------- */
 
 /* --------------- social --------------- */
 .social{
     position: absolute;
-    right: 0;
+    right: 20px;
     top: -6px;
 }
 .social a{
@@ -902,11 +916,11 @@ a.social-ok{
 .footer__logo{
     position: absolute;
     top: 0;
-    left: 0;
+    left: 20px;
 }
 .footer-menu{
     position: absolute;
-    left: 241px;
+    left: 261px;
     top: 2px;
 }
 .footer-menu dl{
