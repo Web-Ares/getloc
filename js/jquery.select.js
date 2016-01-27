@@ -10,7 +10,6 @@ $(function(){
 
 var AresSelect = function( params ){
     this.obj = params.obj;
-    this.curParent = this.obj.parents('.search__filter > div');
     this.optionType = params.optionType || 0;
     this.showType = params.showType || 1;
     this.visible = params.visible || 5;
@@ -96,20 +95,20 @@ var AresSelect = function( params ){
 
                     self.popup = $( '<div class="ares-select__popup" id="ares-select__popup' + id + '"></div>' );
 
-                    if ( self.curParent.length ){
-                        self.popup.addClass('ares-select__popup_search')
-                    }
+                    //if ( self.wrap.parents(".discount__selects-language").length ){
+                    //
+                    //} else {
+                        self.obj.find( 'option' ).each( function(i){
+                            var curItem = $( this );
 
-                    self.obj.find( 'option' ).each( function(i){
-                        var curItem = $( this );
+                            if( i == curIndex ){
+                                list.append( '<li class="active">' + curItem.text() + '</li>' );
+                            } else {
+                                list.append( '<li>' + curItem.text() + '</li>' );
+                            }
 
-                        if( i == curIndex ){
-                            list.append( '<li class="active">' + curItem.text() + '</li>' );
-                        } else {
-                            list.append( '<li>' + curItem.text() + '</li>' );
-                        }
-
-                    } );
+                        } );
+                    //}
 
                     self.popup.append( list );
                     self.wrap.append( self.popup );
@@ -175,7 +174,6 @@ var AresSelect = function( params ){
 
                         }
                     } );
-                    self.curParent.addClass('active');
 
                 },
                 hidePopup: function(){
@@ -193,7 +191,6 @@ var AresSelect = function( params ){
                             self.popup.remove();
                         } );
                     }
-                    self.curParent.removeClass('active');
                 },
                 controls: function() {
                     self.obj.on( 'change', function() {
