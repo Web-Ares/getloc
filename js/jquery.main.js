@@ -101,8 +101,9 @@ var FormValidation = function (obj) {
 
                     } );
 
-                    if(!(_obj.find('.error').length) ){
-
+                    if(_obj.find('.error').length){
+                        return false;
+                    } else {
                         $('.enroll__form form').submit(function () {
                             $.ajax({
                                 url: 'php/form.php',
@@ -152,9 +153,7 @@ var FormValidation = function (obj) {
                             });
                             return false;
                         });
-
                     }
-                    return false;
                 }
             });
             _inputs.on({
