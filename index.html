@@ -612,26 +612,39 @@
                                     <label>Язык перевода *</label>
 
                                     <!-- options__selects-wrap -->
-                                    <div class="discount__selects-language">
+                                    <div class="discount__selects-language" data-language='{"
+                                        languages: [
+                                            {
+                                                "id": 1,
+                                                "name": "Английский",
+                                                "src": "..."
+                                            },
+                                            {
+                                                "id": 2,
+                                                "name": "Русский",
+                                                "src": "..."
+                                            },
+                                            {
+                                                "id": 3,
+                                                "name": "Украинский",
+                                                "src": "..."
+                                            }
+                                        ]
+                                    "}'>
 
-                                    <select name="lang_1" id="select_1" required>
-                                        <option value="0">Выберите язык</option>
-                                        <option value="select1_1" class="options__selects-all">Все виды</option>
-                                        <option value="select1_2" class="options__selects-pass">Английский</option>
-                                        <option value="select1_3" class="options__selects-load">Русский</option>
-                                        <option value="select1_4" class="options__selects-all">Все виды</option>
-                                        <option value="select1_5" class="options__selects-pass">Английский</option>
-                                        <option value="select1_6" class="options__selects-load">Русский</option>
-                                        <option value="select1_7" class="options__selects-all">Все виды</option>
-                                        <option value="select1_8" class="options__selects-pass">Английский</option>
-                                    </select>
+                                        <select name="lang_1" id="select_1" required>
+                                            <option value="0">Выберите язык</option>
+                                            <option value="select1_1" class="options__selects-all">Все виды</option>
+                                            <option value="select1_2" class="options__selects-pass">Английский</option>
+                                            <option value="select1_3" class="options__selects-load">Русский</option>
+                                        </select>
 
-                                    <a href="#" class="discount__languadge-add">Добавить язык перевода</a>
+                                        <a href="#" class="discount__languadge-add">Добавить язык перевода</a>
 
-                                </div>
-                                <!-- /options__selects-wrap -->
+                                    </div>
+                                    <!-- /discount__selects-language -->
 
-                            </fieldset>
+                                </fieldset>
 
                                 <!-- btn -->
                                 <button class="btn btn_discount">
