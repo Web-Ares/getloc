@@ -801,67 +801,14 @@
     -wbkit-transition: border-color .3s ease;
 }
 .discount .focused input{
-    border-color: #ff6353;
-}
-.discount input:invalid{
     border-color: #18baea;
+}
+.discount .error input{
+    border-color: #ff6353;
 }
 fieldset.discount__language{
     width: 100%;
     text-align: left;
-}
-.discount .ui-selectmenu-button{
-    position:relative;
-    display:inline-block;
-    width:224px!important;
-    height: 40px;
-    border-radius: 5px;
-    color: #333;
-    background-color: #fff;
-    text-align: center;
-}
-.discount .ui-selectmenu-text{
-    width:180px;
-    padding:0 30px 0 10px;
-    font-size:16px;
-    line-height:39px;
-}
-.discount .ui-selectmenu-button .ui-icon{
-    position:absolute;
-    top:0;
-    right:0;
-    bottom:0;
-    width:20px;
-    background:url(../img/ico_control.png) no-repeat 0 -27px;
-    cursor:pointer;
-}
-.discount .ui-corner-top .ui-icon{
-    background-position:0 16px
-}
-.ui-selectmenu-menu{
-    display:none;
-    position:absolute;
-    width:230px;
-    border:2px solid #99bbdb;
-    border-top:none;
-    background-color:#fff;
-    overflow:hidden;
-}
-.ui-selectmenu-menu li{
-    font-size:16px;
-    line-height:24px;
-    cursor:pointer;
-}
-.ui-selectmenu-menu .ui-state-focus{
-    background-color:#99bbdb
-}
-.ui-selectmenu-menu.ui-selectmenu-open{
-    display:block;
-    z-index: 5;
-}
-.discount .ui-selectmenu-text{
-    width:210px;
-    padding-right:20px;
 }
 .discount__form{
     width: 480px;
