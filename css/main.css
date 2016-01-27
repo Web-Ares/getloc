@@ -220,12 +220,18 @@
     opacity: 0;
 }
 .btn_discount{
-    padding: 7px 54px 7px 49px;
+    display: block;
+    margin: 0 auto;
+    padding: 14px 53px;
     color: #465863;
     font-weight: 500;
     background-color: #ffd400;
     transition: background-color .3s ease;
     -webkit-transition: background-color .3s ease;
+}
+.btn_discount span{
+    padding-left: 20px;
+    background: url("../img/icons-btn.png") no-repeat 0 50%;
 }
 .btn_discount:hover{
     background-color: #ffdd5d;
@@ -392,11 +398,34 @@
     margin-bottom: 23px;
 }
 .promo__more{
+    position: relative;
     color: #fff;
     border-bottom: 1px solid #fff;
     font-weight: 600;
     transition: color .3s ease, border-bottom-color .3s ease;
     -webkit-transition: color .3s ease, border-bottom-color .3s ease;
+}
+.promo__more:before,
+.promo__more:after{
+    content: '';
+    position: absolute;
+    top: 2px;
+    right: -16px;
+    width: 10px;
+    height: 12px;
+    background-image: url("../img/icons-arrows-down.png");
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
+.promo__more:after{
+    background-position: -12px -1px;
+    opacity: 0;
+}
+.promo__more:hover:before{
+    opacity: 0;
+}
+.promo__more:hover:after{
+    opacity: 1;
 }
 .promo__more:hover{
     color: #fed330;
@@ -443,14 +472,42 @@
     top: 54px;
     right: 0;
 }
-.enroll__form input{
-    border: none;
+.enroll__email-box{
+    display: inline-block;
     width: 250px;
     height: 45px;
-    padding: 0 5px 0 40px;
+    padding-left: 35px;
+    vertical-align: middle;
     border-radius: 5px;
+    background-color: #fff;
+    overflow: hidden;
+}
+.enroll__email-box:before,
+.enroll__email-box:after{
+    content: '';
+    position: absolute;
+    top: 13px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    background-image: url("../img/icons-email.png");
+}
+.enroll__email-box:after{
+    opacity: 0;
+    background-position: 0 -43px;
+}
+.enroll__email-box.focused:before{
+    opacity: 0;
+}
+.enroll__email-box.focused:after{
+    opacity: 1;
+}
+.enroll__form input{
+    border: none;
+    width: 100%;
+    height: 45px;
+    padding: 0 5px;
     font: 15px 'Fira Sans', sans-serif;
-    background: url("../img/icons-email.png") no-repeat 12px 13px #fff;
 }
 /* --------------- /enroll --------------- */
 
@@ -682,8 +739,18 @@
 }
 .people__slider .swiper-button-next,
 .people__slider .swiper-button-prev{
-    top: 101px;
+    top: 0;
+    bottom: 0;
+    height: auto;
     margin-top: 0;
+    background: url("../img/icons-slide-arrows.png") no-repeat 0 100px #fff;
+}
+.people__slider .swiper-button-next{
+    right: 0;
+    background-position-x: -28px;
+}
+.people__slider .swiper-button-prev{
+    left: 0;
 }
 /* --------------- /people --------------- */
 
@@ -709,23 +776,38 @@
 .discount label{
     display: block;
     color: #65828f;
+    transition: color .3s ease;
+    -wbkit-transition: color .3s ease;
+}
+.discount .focused label{
+    color: #fff;
 }
 .discount input{
     width: 100%;
     height: 44px;
     padding: 0 10px;
-    border: 3px solid #18baea;
+    border: 3px solid transparent;
     border-radius: 5px;
     font: 15px 'Fira Sans', sans-serif;
     text-align: center;
+    transition: border-color .3s ease;
+    -wbkit-transition: border-color .3s ease;
+}
+.discount .focused input{
+    border-color: #18baea;
+}
+fieldset.discount__language{
+    width: 100%;
+    text-align: left;
 }
 .discount .ui-selectmenu-button{
     position:relative;
     display:inline-block;
-    width:230px!important;
-    margin-top:15px;
-    border:2px solid #99bbdb;
-    line-height:39px;
+    width:224px!important;
+    height: 44px;
+    border-radius: 5px;
+    color: #333;
+    background-color: #fff;
 }
 .discount .ui-selectmenu-text{
     width:180px;

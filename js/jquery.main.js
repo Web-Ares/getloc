@@ -4,6 +4,22 @@ $(function(){
         Slider($(this));
     });
 
+    $('.site').delegate( "input", "focus blur", function() {
+        var elem = $( this );
+        setTimeout(function() {
+            elem.parent().toggleClass( "focused", elem.is( ":focus" ) );
+        }, 0 );
+    });
+
+    $('.promo__more').on({
+        'click':function(){
+            var elementClick = $(this).attr("href");
+            var destination = $(elementClick).offset().top - 100;
+            jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
+            return false;
+        }
+    });
+
     $.widget( "custom.iconselectmenu", $.ui.selectmenu, {
         _renderItem: function( ul, item ) {
             var li = $( "<li>", { text: item.label } );

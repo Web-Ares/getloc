@@ -91,7 +91,7 @@
                         <!-- /promo__text -->
 
                         <!-- promo__more -->
-                        <a class="promo__more" href="#">Узнать подробнее</a>
+                        <a class="promo__more" href="#advantages">Узнать подробнее</a>
                         <!-- /promo__more -->
 
                     </div>
@@ -120,7 +120,12 @@
                     <!-- enroll__form -->
                     <div class="enroll__form">
                         <form method="get" action="#">
-                            <input type="email" placeholder="Ваш e-mail" class="enroll__email"/>
+
+                            <!-- enroll__email-box -->
+                            <div class="enroll__email-box">
+                                <input type="email" placeholder="Ваш e-mail" class="enroll__email"/>
+                            </div>
+                            <!-- /enroll__email-box -->
 
                             <!-- btn -->
                             <button class="btn btn_enroll">
@@ -142,7 +147,7 @@
             <div class="site__wrap">
 
                 <!-- advantages -->
-                <div class="advantages">
+                <div class="advantages" id="advantages">
 
                     <!-- site__title -->
                     <h2 class="site__title"><strong>getLoc</strong> поможет вам переводить сайты легко и быстро!</h2>
@@ -545,7 +550,7 @@
                                 <input type="email" id="discount__phone" />
                             </fieldset>
 
-                            <fieldset>
+                            <fieldset class="discount__language">
                                 <label>Язык перевода *</label>
                                 <select class="discount__languadge">
                                     <option value="0">Выберите язык</option>
