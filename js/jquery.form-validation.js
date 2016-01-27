@@ -56,12 +56,60 @@
 
                         } );
 
-                        if(_obj.find('.error').length ){
-                            return false;
-                        }else{
-                            return true;
-                        }
+                        if(!(_obj.find('.error').length) ){
 
+                            $('.enroll__form form').submit(function () {
+                                $.ajax({
+                                    url: 'php/form.php',
+                                    dataType: 'html',
+                                    timeout: 20000,
+                                    type: "GET",
+                                    data: {
+                                        enroll: 'true',
+                                        email: $('#enroll__email').val()
+                                    },
+                                    success: function (msg) {
+                                        $('.enroll__form').addClass('success')
+                                        $('.enroll__thanks').addClass('success')
+                                    },
+                                    error: function (XMLHttpRequest) {
+                                        if (XMLHttpRequest.statusText != "abort") {
+                                            alert(XMLHttpRequest.statusText);
+                                        }
+                                    }
+                                });
+                                return false;
+                            });
+
+                            $('.discount__form form').submit(function () {
+                                $.ajax({
+                                    url: 'php/form.php',
+                                    dataType: 'html',
+                                    timeout: 20000,
+                                    type: "GET",
+                                    data: {
+                                        discount: 'true',
+                                        name: $('#discount__name').val(),
+                                        email: $('#discount__email').val(),
+                                        phone: $('#discount__phone').val(),
+                                        address: $('#discount__address').val(),
+                                        language: $('discount__language').val()
+                                    },
+                                    success: function (msg) {
+                                        $('.discount__layout').addClass('success')
+                                        $('.discount__thanks').addClass('success')
+                                    },
+                                    error: function (XMLHttpRequest) {
+                                        if (XMLHttpRequest.statusText != "abort") {
+                                            alert(XMLHttpRequest.statusText);
+                                        }
+                                    }
+                                });
+                                return false;
+                            });
+
+                        }
+                        return false;
                     }
                 });
                 _inputs.on({
