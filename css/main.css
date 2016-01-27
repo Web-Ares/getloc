@@ -103,7 +103,7 @@
     width: 950px;
 }
 .site__footer {
-    z-index: 2;
+    z-index: 1;
     position: absolute;
     left: 0;
     right: 0;
@@ -898,6 +898,14 @@ fieldset.discount__language{
     width: 100%;
     text-align: left;
 }
+.discount .error .ares-select {
+    border-color: #ff6353;
+    color: #f35747
+}
+.discount .error .ares-select__item:after {
+    border-left: 2px solid #ff6353;
+    border-bottom: 2px solid #ff6353;
+}
 .discount__form{
     width: 480px;
     margin: 0 auto;
@@ -913,11 +921,34 @@ fieldset.discount__language{
     line-height: 24px;
 }
 .discount__languadge-add{
-    padding-left: 25px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 13px 0 0 26px;
     font-size: 15px;
-    border: none;
+    border-bottom: 1px solid #fff;
     background: none;
     color: #fff;
+    -webkit-transition: border-bottom 0.3s ease;
+    transition: border-bottom 0.3s ease;
+}
+.discount__languadge-add:hover {
+    border-bottom: 1px solid transparent;
+}
+.discount__languadge-add:after,
+.discount__languadge-add:before {
+    position: absolute;
+    top: 7px;
+    left: -20px;
+    width: 12px;
+    height: 2px;
+    background: #fff;
+    content:'';
+}
+.discount__languadge-add:after {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
 .discount__thanks{
     position: absolute;
@@ -1082,7 +1113,7 @@ a.social-ok{
     right: 95px;
     bottom: -31px;
 }
-.gallery__item_3-pics img.gallery__item_2nd {
+.gallery__item img.gallery__item_3rd + img.gallery__item_2nd {
     right: 26px;
 }
 .gallery__item.slider__item-finish img.gallery__item_1st_right {
