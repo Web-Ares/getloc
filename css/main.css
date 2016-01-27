@@ -591,7 +591,7 @@
     -webkit-filter: grayscale(1);
     -moz-filter: grayscale(1);
 }
-.people__img:hover{
+.swiper-slide:hover .people__img{
     filter: grayscale(0);
     -webkit-filter: grayscale(0);
     -moz-filter: grayscale(0);
