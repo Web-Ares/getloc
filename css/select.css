@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*
+    main styles
+    version: 24.08.2015
+
+    cart
+
+*/
+
+/* ---------------- ares-select ------------------ */
+.ares-select{
+    position: relative;
+    width: 223px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 5px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 40px;
+    color: #ccc;
+    font-size: 15px;
+    font-family: 'Fira Sans', sans-serif;
+    cursor: pointer;
+    background: #f0f0f0;
+    border: 3px solid transparent;
+    -webkit-transition: border 0.3s ease;
+    transition: border 0.3s ease;
+}
+.ares-select.active:after,
+.ares-select.active:before{
+    opacity: 1;
+}
+.ares-select__item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    padding: 10px 23px 6px 17px;
+
+}
+.ares-select_selected .ares-select__item {
+    color: #333;
+}
+.ares-select__item:after {
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    margin-top: -4px;
+    width: 5px;
+    height: 5px;
+    border-left: 2px solid #b3b3b3;
+    border-bottom: 2px solid #b3b3b3;
+    content: '';
+    -webkit-transition: border 0.3s ease, transform 0.3s ease;
+    transition: border 0.3s ease, transform 0.3s ease;
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+.ares-select.active .ares-select__item:after {
+    border-left: 2px solid #18baea;
+    border-bottom: 2px solid #18baea;
+    -ms-transform: rotate(-225deg);
+    -webkit-transform: rotate(-225deg);
+    transform: rotate(-225deg);
+}
+.ares-select_mobile select {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 100%;
+    bottom: -1px;
+}
+.ares-select_custom select{
+    position: absolute;
+    left: -100000px;
+}
+.ares-select__popup {
+    position: absolute;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    z-index: 10;
+    overflow: hidden;
+    color: #333;
+    font-size: 18px;
+    line-height: 18px;
+    margin: -1px 0 0 -3px;
+    text-align: center;
+    border-radius: 3px;
+    background: #fff;
+}
+.ares-select__popup ul {
+    z-index: 1;
+
+}
+.ares-select__popup li{
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: pointer;
+    padding: 11px 0;
+    font-size: 15px;
+}
+.ares-select__popup li.active {
+    background: #e4e6e8;
+}
+.ares-select__popup .iScrollVerticalScrollbar {
+    position: absolute;
+    width: 15px;
+    top: 0;
+    bottom: 0;
+    background: #ccc;
+    right: 0;
+    z-index: 3;
+    -webkit-transform: translateZ(0);
+}
+.ares-select__popup .iScrollIndicator {
+    background: #aaa;
+}
+.ares-select__popup_search .ares-select__item {
+}
+/* ---------------- /ares-select ------------------ */

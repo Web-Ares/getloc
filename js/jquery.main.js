@@ -56,6 +56,13 @@ $(function(){
         } );
     }
 
+    $(".gallery__next, .gallery__prev").on({
+        click: function(event){
+            event = event || window.event;
+            event.stopPropagation();
+        }
+    });
+
 } );
 var FormValidation = function (obj) {
 
