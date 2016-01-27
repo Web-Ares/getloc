@@ -168,9 +168,9 @@
                         <form method="get" action="#" novalidate>
 
                             <!-- enroll__email-box -->
-                            <div class="enroll__email-box">
-                                <input type="email" placeholder="Ваш e-mail" class="enroll__email" required/>
-                            </div>
+                            <fieldset class="enroll__email-box">
+                                <input type="email" id="enroll__email" placeholder="Ваш e-mail" class="enroll__email" required/>
+                            </fieldset>
                             <!-- /enroll__email-box -->
 
                             <!-- btn -->
@@ -182,6 +182,14 @@
                         </form>
                     </div>
                     <!-- /enroll__form -->
+
+                    <!-- enroll__thanks -->
+                    <div class="enroll__thanks">
+                        <span class="enroll__thanks-title">Спасибо за заявку!</span>
+                        <p>Уверяем вас, вы узнаете о запуске
+                        сервиса одним из первых.</p>
+                    </div>
+                    <!-- /enroll__thanks -->
 
                 </div>
                 <!-- site__wrap -->
@@ -562,76 +570,102 @@
                 <!-- site__wrap -->
                 <div class="site__wrap">
 
-                    <!-- site__title -->
-                    <h2 class="site__title">Получите <span>скидку</span> на локализацию вашего сайта</h2>
-                    <!-- /site__title -->
+                    <!-- discount__layout -->
+                    <div class="discount__layout">
 
-                    <!-- discount__introduction -->
-                    <div class="discount__introduction">
-                        <p>Заполните форму и когда проект запуститься, у вас будет возможность пользоваться услугами сервиса со скидкой.</p>
+                        <!-- site__title -->
+                        <h2 class="site__title">Получите <span>скидку</span> на локализацию вашего сайта</h2>
+                        <!-- /site__title -->
+
+                        <!-- discount__introduction -->
+                        <div class="discount__introduction">
+                            <p>Заполните форму и когда проект запуститься, у вас будет возможность пользоваться услугами сервиса со скидкой.</p>
+                        </div>
+                        <!-- /discount__introduction -->
+
+                        <!-- /discount__form -->
+                        <div class="discount__form">
+                            <form method="get" action="#" novalidate>
+
+                                <fieldset>
+                                    <label for="discount__email">Ваша эл. почта *</label>
+                                    <input type="email" id="discount__email"  placeholder="yourmail@gmai" required/>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label for="discount__name">Имя, фамилия</label>
+                                    <input type="email" id="discount__name"/>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label for="discount__address">Адрес вашего сайта *</label>
+                                    <input type="email" id="discount__address" placeholder="http://yoursite.ru" required/>
+                                </fieldset>
+
+                                <fieldset>
+                                    <label for="discount__phone">Номер телефона</label>
+                                    <input type="email" id="discount__phone"/>
+                                </fieldset>
+
+                                <fieldset class="discount__language">
+                                    <label>Язык перевода *</label>
+
+                                    <!-- options__selects-wrap -->
+                                    <div class="discount__selects-language">
+
+                                        <select name="select-type" id="select-type" required>
+                                            <option value="select1_1" class="options__selects-all">Все виды</option>
+                                            <option value="select1_2" class="options__selects-pass">Английский</option>
+                                            <option value="select1_3" class="options__selects-load">Русский</option>
+                                            <option value="select1_4" class="options__selects-tractor">Тягачи</option>
+                                            <option value="select1_5" class="options__selects-semi">Полуприцепы</option>
+                                            <option value="select1_6" class="options__selects-trail">Прицепы</option>
+                                            <option value="select1_7" class="options__selects-bus">Автобусы</option>
+                                            <option value="select1_8" class="options__selects-micro">Микроавтобусы</option>
+                                            <option value="select1_9" class="options__selects-camper">Кемперы</option>
+                                            <option value="select1_10" class="options__selects-spec">Спец. техника</option>
+                                            <option value="select1_11" class="options__selects-loader">Погрузчики</option>
+                                            <option value="select1_12" class="options__selects-farm">Сельхозтехника</option>
+                                        </select>
+
+                                    </div>
+                                    <!-- /options__selects-wrap -->
+
+                                    <button class="discount__languadge-add">Добавить язык перевода</button>
+                                </fieldset>
+
+                                <!-- btn -->
+                                <button class="btn btn_discount">
+                                    <span>Получить скидку</span>
+                                </button>
+                                <!-- /btn -->
+
+                            </form>
+                        </div>
+                        <!-- discount__form -->
+
                     </div>
-                    <!-- /discount__introduction -->
+                    <!-- /discount__layout -->
 
-                    <!-- /discount__form -->
-                    <div class="discount__form">
-                        <form method="get" action="#" novalidate>
+                    <!-- discount__thanks -->
+                    <div class="discount__thanks">
 
-                            <fieldset>
-                                <label for="discount__email">Ваша эл. почта *</label>
-                                <input type="email" id="discount__email"  placeholder="yourmail@gmai" required/>
-                            </fieldset>
+                        <img src="img/img-thanks.png" alt="img"/>
 
-                            <fieldset>
-                                <label for="discount__name">Имя, фамилия</label>
-                                <input type="email" id="discount__name" required/>
-                            </fieldset>
+                        <!-- discount__thanks-title -->
+                        <h2 class="discount__thanks-title">Спасибо большое за вашу заявку</h2>
+                        <!-- /discount__thanks-title -->
 
-                            <fieldset>
-                                <label for="discount__address">Адрес вашего сайта *</label>
-                                <input type="email" id="discount__address" placeholder="http://yoursite.ru" required/>
-                            </fieldset>
+                        <p>Мы добавили ваш сайт на просчёт текста. Мы можете посмотреть сколько там страниц, символов, слов и т.д.</p>
+                        <p>Мы также выслали вам письмо ссылкой на статистику по вашему сайту.</p>
 
-                            <fieldset>
-                                <label for="discount__phone">Номер телефона</label>
-                                <input type="email" id="discount__phone" required/>
-                            </fieldset>
+                        <!-- btn -->
+                        <a href="#" class="btn btn_2">
+                            <span>Посмотреть статистику</span>
+                        </a>
+                        <!-- /btn -->
 
-                            <fieldset class="discount__language">
-                                <label>Язык перевода *</label>
-
-                                <!-- options__selects-wrap -->
-                                <div class="discount__selects-language">
-
-                                    <select name="select-type" id="select-type" required>
-                                        <option value="select1_1" class="options__selects-all">Все виды</option>
-                                        <option value="select1_2" class="options__selects-pass">Английский</option>
-                                        <option value="select1_3" class="options__selects-load">Русский</option>
-                                        <option value="select1_4" class="options__selects-tractor">Тягачи</option>
-                                        <option value="select1_5" class="options__selects-semi">Полуприцепы</option>
-                                        <option value="select1_6" class="options__selects-trail">Прицепы</option>
-                                        <option value="select1_7" class="options__selects-bus">Автобусы</option>
-                                        <option value="select1_8" class="options__selects-micro">Микроавтобусы</option>
-                                        <option value="select1_9" class="options__selects-camper">Кемперы</option>
-                                        <option value="select1_10" class="options__selects-spec">Спец. техника</option>
-                                        <option value="select1_11" class="options__selects-loader">Погрузчики</option>
-                                        <option value="select1_12" class="options__selects-farm">Сельхозтехника</option>
-                                    </select>
-
-                                </div>
-                                <!-- /options__selects-wrap -->
-
-                                <button class="discount__languadge-add">Добавить язык перевода</button>
-                            </fieldset>
-
-                            <!-- btn -->
-                            <button class="btn btn_discount">
-                                <span>Получить скидку</span>
-                            </button>
-                            <!-- /btn -->
-
-                        </form>
                     </div>
-                    <!-- discount__form -->
 
                 </div>
                 <!-- site__wrap -->

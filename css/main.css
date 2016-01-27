@@ -222,6 +222,37 @@
 .btn_1:hover span:before{
     opacity: 0;
 }
+.btn_2{
+    margin-top: 31px;
+    padding: 11px 26px 10px;
+    border: none;
+    background-color: #65727a;
+    color: #fff;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.btn_2:hover{
+    background-color: #78848b;
+}
+.btn_2:active{
+    background-color: #78848b;
+}
+.btn_2 span{
+    position: relative;
+    padding-right: 14px;
+}
+.btn_2 span:after{
+    position: absolute;
+    top: 3px;
+    right: -4px;
+    content: '';
+    width: 12px;
+    height: 10px;
+    background-image: url("../img/icons-arrows.png");
+    background-position: 0 -10px;
+    transition: opacity .3s ease;
+    -webkit-transition: opacity .3s ease;
+}
 .btn_discount{
     display: block;
     margin: 0 auto;
@@ -474,20 +505,56 @@
     line-height: 49px;
     background: url("../img/icons-start.png") no-repeat 0 47%;
 }
+.enroll__thanks{
+    position: absolute;
+    top: 30px;
+    right: 57px;
+    height: 90px;
+    width: 390px;
+    padding-top: 7px;
+    padding-left: 109px;
+    font-size: 15px;
+    line-height: 24px;
+    background: url("../img/img-thanks.png") no-repeat 0 0;
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+.enroll__thanks-title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 24px;
+}
+.enroll__thanks.success{
+    opacity: 1;
+    visibility: visible;
+}
 .enroll__form{
     position: absolute;
     top: 54px;
     right: 20px;
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+}
+.enroll__form.success{
+    opacity: 0;
 }
 .enroll__email-box{
     display: inline-block;
     width: 250px;
     height: 45px;
     padding-left: 35px;
+    border: 3px solid #fff;
     vertical-align: middle;
     border-radius: 5px;
     background-color: #fff;
     overflow: hidden;
+    transition: border-color .3s ease;
+    -webkit-transition: border-color .3s ease;
+}
+.enroll__email-box.error{
+    border-color: #ff6353;
 }
 .enroll__email-box:before,
 .enroll__email-box:after{
@@ -512,10 +579,16 @@
 .enroll__form input{
     border: none;
     width: 100%;
-    height: 45px;
+    height: 39px;
     padding: 0 5px;
     font: 15px 'Fira Sans', sans-serif;
+    transition: color .3s ease;
+    -webkit-transition: color .3s ease;
 }
+.enroll__form .error input::-webkit-input-placeholder {color: #ff6353}
+.enroll__form .error input::-moz-placeholder          {color: #ff6353}
+.enroll__form .error input:-moz-placeholder           {color: #ff6353}
+.enroll__form .error input:-ms-input-placeholder      {color: #ff6353}
 /* --------------- /enroll --------------- */
 
 /* --------------- advantages --------------- */
@@ -763,6 +836,8 @@
 
 /* --------------- discount --------------- */
 .discount{
+    position: relative;
+    min-height: 630px;
     padding-top: 63px;
     color: #fff;
     background: rgb(62,79,89);
@@ -771,6 +846,14 @@
     background: linear-gradient(to bottom,  rgba(62,79,89,1) 0%,rgba(63,81,91,1) 7%,rgba(64,82,94,1) 8%,rgba(64,82,92,1) 10%,rgba(65,83,95,1) 10%,rgba(64,86,97,1) 17%,rgba(65,87,100,1) 17%,rgba(65,87,98,1) 19%,rgba(66,88,101,1) 19%,rgba(66,90,100,1) 22%,rgba(68,90,103,1) 23%,rgba(66,93,104,1) 25%,rgba(69,93,105,1) 26%,rgba(67,94,105,1) 28%,rgba(69,96,107,1) 29%,rgba(71,99,111,1) 36%,rgba(72,101,115,1) 37%,rgba(72,104,117,1) 43%,rgba(75,107,122,1) 46%,rgba(74,110,124,1) 50%,rgba(76,112,128,1) 52%,rgba(77,114,130,1) 56%,rgba(80,119,136,1) 61%,rgba(82,125,142,1) 69%,rgba(80,126,141,1) 70%,rgba(82,128,144,1) 72%,rgba(83,128,147,1) 76%,rgba(86,135,152,1) 83%,rgba(84,135,152,1) 85%,rgba(87,135,155,1) 88%,rgba(86,139,157,1) 90%,rgba(89,141,162,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4f59', endColorstr='#598da2',GradientType=0 );
     text-align: center;
+}
+.discount__layout{
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+}
+.discount__layout.success{
+    opacity: 0;
+    visibility: hidden;
 }
 .discount fieldset{
     display: inline-block;
@@ -806,6 +889,10 @@
 .discount .error input{
     border-color: #ff6353;
 }
+.discount .error input::-webkit-input-placeholder {color: #ff6353}
+.discount .error input::-moz-placeholder          {color: #ff6353}
+.discount .error input:-moz-placeholder           {color: #ff6353}
+.discount .error input:-ms-input-placeholder      {color: #ff6353}
 fieldset.discount__language{
     width: 100%;
     text-align: left;
@@ -830,6 +917,29 @@ fieldset.discount__language{
     border: none;
     background: none;
     color: #fff;
+}
+.discount__thanks{
+    position: absolute;
+    top: 71px;
+    left: 50%;
+    width: 560px;
+    font-size: 15px;
+    line-height: 24px;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+}
+.discount__thanks.success{
+    opacity: 1;
+    visibility: visible;
+}
+.discount__thanks-title{
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 86px;
 }
 /* --------------- /discount --------------- */
 

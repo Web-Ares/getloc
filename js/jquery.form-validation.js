@@ -6,7 +6,7 @@
             new FormValidation ( $(this) )
         } );
 
-        $.each( $('.discount__form'), function(){
+        $.each( $('.enroll__form'), function(){
             new FormValidation ( $(this) )
         } );
 
