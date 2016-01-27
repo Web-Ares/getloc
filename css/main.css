@@ -58,6 +58,9 @@
 .site:after{
     height: 300px;
 }
+.site_inner{
+    padding-top: 53px;
+}
 .site__title{
     margin-bottom: 24px;
     font-size: 30px;
