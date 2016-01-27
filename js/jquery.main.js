@@ -106,12 +106,10 @@ var FormValidation = function (obj) {
                         }
                         else if ( curAttr == "email" ){
                             var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
-                            if ( pattern.test('#discount__email') == false ){
+                            if ( pattern.test(curItem.val()) == false ){
                                 curItem.addClass("site__required-error");
                                 curItem.closest("fieldset").addClass('error');
                             }
-                            console.log(pattern.test('#discount__email'))
-
                         }
 
                     } );
