@@ -233,6 +233,24 @@
 .btn_discount:active{
     background-color: #f7ca1f;
 }
+.btn_enroll{
+    margin-left: 5px;
+    padding: 14px 28px;
+    color: #fff;
+    background-color: #18baea;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.btn_enroll:hover{
+    background-color: #2cc2ee;
+}
+.btn_enroll:active{
+    background-color: #16a8d3;
+}
+.btn_enroll span{
+    padding-left: 20px;
+    background: url("../img/icons-btn-white.png") no-repeat 0 50%;
+}
 /* --------------- /btn --------------- */
 
 /* --------------- language --------------- */
@@ -316,12 +334,15 @@
 /* --------------- next-step --------------- */
 .next-step{
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    bottom: -1px;
+    left: 50%;
+    width: 38px;
+    height: 1px;
+    margin-left: -19px;
+    background-color: #fff;
 }
 .next-step:after, .next-step:before {
-    top: 100%;
+    top: -3px;
     left: 50%;
     border: solid transparent;
     content: " ";
@@ -392,10 +413,44 @@
 .enroll > div{
     position: relative;
 }
+.enroll__content{
+    width: 380px;
+    padding-top: 25px;
+    padding-left: 61px;
+    font-size: 24px;
+    line-height: 24px;
+    background: url("../img/icons-enroll.png") no-repeat 0 27px;
+}
+.enroll__content a{
+    font-size: 15px;
+    color: #333;
+    border-bottom: 1px solid #333;
+    transition: border-bottom-color .3s ease;
+    -webkit-transition: border-bottom-color .3s ease;
+}
+.enroll__content a:hover{
+    border-bottom-color: transparent;
+}
+.enroll__start{
+    display: block;
+    padding-left: 20px;
+    font-size: 13px;
+    line-height: 49px;
+    background: url("../img/icons-start.png") no-repeat 0 47%;
+}
 .enroll__form{
     position: absolute;
     top: 54px;
     right: 0;
+}
+.enroll__form input{
+    border: none;
+    width: 250px;
+    height: 45px;
+    padding: 0 5px 0 40px;
+    border-radius: 5px;
+    font: 15px 'Fira Sans', sans-serif;
+    background: url("../img/icons-email.png") no-repeat 12px 13px #fff;
 }
 /* --------------- /enroll --------------- */
 
