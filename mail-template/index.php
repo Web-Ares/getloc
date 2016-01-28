@@ -9,7 +9,6 @@ $message = '<style>
     }
 </style>
 
-
 <table cellpadding="0" cellspacing="0"   align="center"
        style="font-family: Arial, sans-serif;background:#3e4f59;border-collapse:collapse; width: 100%; height: 100%; vertical-align: middle; text-align: center; border: none;">
     <tr>
@@ -29,7 +28,7 @@ $message = '<style>
                         height="130">
 
                         <a href="#">
-                            <img src="img/logo.png" width="110" height="28" alt="getLock">
+                            <img src="http://dev.ergonomic.be/yev/mail-template/img/logo.png" width="110" height="28" alt="getLock">
                         </a>
 
                     </td>
@@ -39,7 +38,7 @@ $message = '<style>
                 <!--content-->
                 <tr>
                     <td style="height: 200px; vertical-align: middle; text-align: center;" height="200">
-                        <img src="img/head-pic.jpg" width="600" height="200" alt="getLock">
+                        <img src="http://dev.ergonomic.be/yev/mail-template/img/head-pic.jpg" width="600" height="200" alt="getLock">
                     </td>
                 </tr>
                 <tr>
@@ -75,15 +74,15 @@ $message = '<style>
                                     <table cellpadding="0" cellspacing="0" width="100%">
                                         <tr style="height: 128px; text-align: center; vertical-align: middle;">
                                             <td width="200" height="128"  style="height: 128px; width: 200px;">
-                                                <img src="img/pc-pic.png" width="110" height="88" alt="pc-pic">
+                                                <img src="http://dev.ergonomic.be/yev/mail-template/img/pc-pic.png" width="110" height="88" alt="pc-pic">
                                             </td>
 
                                             <td width="200" height="128"  style="height: 128px; width: 200px;">
-                                                <img src="img/eq-pic.png" width="91" height="88" alt="eq-pic">
+                                                <img src="http://dev.ergonomic.be/yev/mail-template/img/eq-pic.png" width="91" height="88" alt="eq-pic">
                                             </td>
 
                                             <td width="200" height="128"  style="height: 128px; width: 200px;">
-                                                <img src="img/user-pic.png" width="104" height="92" alt="user-pic">
+                                                <img src="http://dev.ergonomic.be/yev/mail-template/img/user-pic.png" width="104" height="92" alt="user-pic">
                                             </td>
                                         </tr>
 
@@ -210,10 +209,5 @@ $message = '<style>
     </tr>
 </table>';
 
-//mail("office@webares.com.ua", "test", $message, $headers);
-mail("einzweindrey@gmail.com", "test", $message, $headers);
-//mail("iytin-ne@yandex.ru", "test", $message, $headers);
-//mail("valeri.radinovich@yahoo.com", "test", $message, $headers);
-mail("vibe_tribe@list.ru", "test", $message, $headers);
 
 ?>
