@@ -1,22 +1,31 @@
+var selects2 = [];
 $(function(){
-    $( 'select' ).each( function(){
-        new AresSelect( {
+
+    $( 'select' ).each( function(i){
+        selects2[i] = new AresSelect2( {
             obj: $( this ),
             optionType: 1,
-            showType: 2
+            showType: 2,
+            selects: selects2
         } );
     } );
+
+    $.each( $('.discount__language'), function(){
+        new Lenguages ( $(this) )
+    } );
+
 } );
 
-var AresSelect = function( params ){
+var AresSelect2 = function( params ){
     this.obj = params.obj;
+    this.selects = params.selects;
     this.optionType = params.optionType || 0;
     this.showType = params.showType || 1;
     this.visible = params.visible || 5;
 
     this.init();
 };
-    AresSelect.prototype = {
+    AresSelect2.prototype = {
         init: function(){
             var self = this;
 
@@ -35,6 +44,7 @@ var AresSelect = function( params ){
                     self.device = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
                     self.text = $( '<span class="ares-select__item"></span>' );
                     self.wrap = $( '<div class="ares-select"></div>' );
+                    self.cover = $( '.discount__language' );
                     self.window = $( window );
                     self.opened = false;
 
@@ -96,8 +106,6 @@ var AresSelect = function( params ){
                     self.popup = $( '<div class="ares-select__popup" id="ares-select__popup' + id + '"></div>' );
 
                     if ( self.wrap.parents(".discount__selects-language").length ){
-                        var arr = self.wrap.parents().data('language');
-                        self.core.addOptions(arr);
                         self.obj.find( 'option' ).each( function(i){
                             if ( i==0 ){
                                 var curItem = $( this );
@@ -183,7 +191,6 @@ var AresSelect = function( params ){
                             self.obj.val( self.obj.find( 'option' ).eq( index).attr( 'value' ) );
                             self.obj.trigger( 'change' );
                             self.core.hidePopup();
-                            self.wrap.removeClass('active');
                             if ( self.obj.val() == "0" ){
                                 self.wrap.removeClass( 'ares-select_selected' );
                             } else {
@@ -194,14 +201,7 @@ var AresSelect = function( params ){
                     } );
 
                 },
-                addOptions: function(arr){
-                    for ( var i =0; i<arr.languages.length; i++ ){
-                        //console.log(arr.languages[i].name);
-                        var selectID = self.obj.attr('id'),
-                            option = $('<option value="'+selectID+'_'+i+'" data-src="'+arr.languages[i].src+'">'+arr.languages[i].name+'</option>');
-                        self.obj.append(option);
-                    }
-                },
+
                 hidePopup: function(){
                     self.opened = false;
                     if( !self.showType ){
@@ -217,6 +217,7 @@ var AresSelect = function( params ){
                             self.popup.remove();
                         } );
                     }
+                    self.wrap.removeClass('active');
                 },
                 controls: function() {
                     self.obj.on( 'change', function() {
@@ -248,6 +249,14 @@ var AresSelect = function( params ){
                                     event.cancelBubble = true
                                 }
 
+                                $.each(self.selects, function(){
+                                    if (this.obj != self.obj) {
+                                        if ( this.opened ){
+                                            this.core.hidePopup();
+                                        }
+                                    }
+                                });
+
                                 if( self.opened ){
                                     self.wrap.removeClass('active');
                                     self.core.hidePopup();
@@ -267,7 +276,112 @@ var AresSelect = function( params ){
                             }
                         } );
                     }
+
                 }
             };
         }
     };
+
+var Lenguages = function (obj) {
+
+    var _obj = obj,
+        _addButton = _obj.find( '.discount__languadge-add'),
+        _selectsWrapper = _obj.find( '.discount__selects-language'),
+        _arrLanguages = _selectsWrapper.data( 'language' ).languages;
+
+    var _addEvents = function () {
+            _addButton.on({
+                click: function(){
+                    _addLanguage();
+                    return false;
+                }
+            });
+
+            _obj.on( 'change', 'select', function(){
+                _fillSelects();
+            } );
+            _obj.on( 'click', '.discount__languadge-delete', function(){
+                _removeSelect( $( this ).parent() );
+                return false;
+            } );
+
+        },
+        _addLanguage = function(){
+            var selectAmount = _obj.find( 'select' ).length,
+                selectWrap = $( '<div class="discount__language-wrapper">\
+                                     <select name="lang_'+selectAmount+'" required>\
+                                        <option value="0" selected>Выберите язык</option>\
+                                     </select>\
+                                     <a href="#" class="discount__languadge-delete"></a>\
+                                </div>' );
+
+            _selectsWrapper.append( selectWrap );
+            _initNewSelect( selectWrap.find( 'select' ) );
+            _fillSelects();
+            
+            if ( selectAmount == _arrLanguages.length - 1 ){
+                _addButton.css( 'display', 'none' );
+            }
+        },
+        _fillSelects = function(){
+
+            var values = [];
+
+            $.each( _obj.find( 'select' ), function( i ) {
+                values[ i ] = parseInt( this.value );
+            } );
+
+            $.each( _obj.find( 'select' ), function( i ) {
+
+                var curSelect = $( this );
+
+                curSelect.find( 'option:not(:first)').remove();
+
+                $.each( _arrLanguages, function() {
+                    var curLanguage = this,
+                        curLanguageID = curLanguage.id,
+                        checker = false;
+
+                    $.each( values, function(j){
+                        if( curLanguageID == this ) {
+                            checker = true;
+
+                            if ( i == j ) {
+                                curSelect.append( '<option value="' + curLanguageID + '" data-src="' + curLanguage.src + '" selected>' + curLanguage.name + '</option>' );
+                            }
+
+                            return false;
+                        }
+                    } );
+
+                    if( !checker ) {
+                        curSelect.append( '<option value="' + curLanguageID + '" data-src="' + this.src + '">' + this.name + '</option>' );
+                    }
+
+                } );
+
+            } );
+
+        },
+        _init = function () {
+            _addEvents();
+            _fillSelects();
+        },
+        _initNewSelect = function( select ){
+            selects2[ selects2.length ] = new AresSelect2( {
+                obj: select,
+                optionType: 1,
+                showType: 2,
+                selects: selects2
+            } );
+        },
+        _removeSelect = function( parent ){
+            var selectID = _obj.find( 'select' ).index( parent.find( 'select' ) );
+            selects2.splice( selectID, 1 );
+            parent.remove();
+            _fillSelects();
+            _addButton.css( 'display', 'inline-block' );
+        };
+
+    _init();
+};
