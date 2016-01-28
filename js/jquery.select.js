@@ -95,9 +95,9 @@ var AresSelect = function( params ){
 
                     self.popup = $( '<div class="ares-select__popup" id="ares-select__popup' + id + '"></div>' );
 
-                    //if ( self.wrap.parents(".discount__selects-language").length ){
-                    //
-                    //} else {
+                    if ( self.wrap.parents(".discount__selects-language").length ){
+
+                    } else {
                         self.obj.find( 'option' ).each( function(i){
                             var curItem = $( this );
 
@@ -108,7 +108,7 @@ var AresSelect = function( params ){
                             }
 
                         } );
-                    //}
+                    }
 
                     self.popup.append( list );
                     self.wrap.append( self.popup );
