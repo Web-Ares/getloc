@@ -9,7 +9,7 @@
 
     <title>Title</title>
 
-    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&subset=cyrillic' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="css/swiper.min.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -79,38 +79,72 @@
                 <!-- /site__title -->
 
                 <!-- site__introduction -->
-                <div class="discount__introduction">
+                <div class="site__introduction">
                     <p>Здесь вы можете посмотреть статистику по всем проектам, которые учавствуют в тестировании сервиса.</p>
                 </div>
                 <!-- /site__introduction -->
 
+                <!-- statistic -->
                 <ul class="statistic">
                     <li>
-                        Добавлено
+
+                        <!-- statistic__title -->
+                        <span class="statistic__title">Добавлено</span>
+                        <!-- /statistic__title -->
+
+                        <!-- statistic__num -->
                         <span class="statistic__num">15</span>
-                        сайтов
+                        <!-- /statistic__num -->
+
+                        <span>сайтов</span>
                     </li>
                     <li>
-                        Проверено
+
+                        <!-- statistic__title -->
+                        <span class="statistic__title">Проверено</span>
+                        <!-- /statistic__title -->
+
+                        <!-- statistic__num -->
                         <span class="statistic__num">11189</span>
-                        страниц
+                        <!-- /statistic__num -->
+
+                        <span>страниц</span>
                     </li>
                     <li>
-                        Найдено
+
+                        <!-- statistic__title -->
+                        <span class="statistic__title">Найдено</span>
+                        <!-- /statistic__title -->
+
+                        <!-- statistic__num -->
                         <span class="statistic__num">64243</span>
-                        блоков
+                        <!-- /statistic__num -->
+
+                        <span>блоков</span>
                     </li>
                 </ul>
+                <!-- /statistic -->
 
-                <a href="#" class="btn">Добавить свой сайт</a>
+                <div class="site__panel">
 
-                <div class="search">
-                    <form method="get" action="#">
-                        <input type="search" name="search" placeholder="Найти сайт"/>
-                        <button name="find"></button>
-                    </form>
+                    <!-- btn -->
+                    <a href="#" class="btn btn_add">
+                        <span>Добавить свой сайт</span>
+                    </a>
+                    <!-- /btn -->
+
+                    <!-- search -->
+                    <div class="search">
+                        <form method="get" action="#">
+                            <input type="search" name="search" placeholder="Найти сайт"/>
+                            <button name="find"></button>
+                        </form>
+                    </div>
+                    <!-- /search -->
+
                 </div>
 
+                <!-- projects -->
                 <table class="projects">
                     <thead>
                     <tr>
@@ -153,7 +187,9 @@
                     </tr>
                     </tbody>
                 </table>
+                <!-- /projects -->
 
+                <!-- paginator -->
                 <div class="paginator">
                     <a href="#" class="paginator__prev">prev</a>
                     <a href="#">1</a>
@@ -165,6 +201,7 @@
                     <a href="#">7</a>
                     <a href="#" class="paginator__next">next</a>
                 </div>
+                <!-- /paginator -->
 
             </div>
             <!-- /site__wrap -->
