@@ -1,6 +1,18 @@
 @charset "utf-8";
 /* --------------- Style to null --------------- */
 *{-moz-box-sizing:border-box;box-sizing:border-box;}html,body,div,span,h1,h2,h3,h4,h5,h6,p,em,img,strong,sub,sup,b,u,i,dl,dt,dd,ol,ul,li,fieldset,form,label,table,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,a,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{border:0;outline:0;vertical-align:baseline;background:transparent;font-size:100%;margin:0;padding:0;}a{background:transparent;}table{border-collapse:collapse;border-spacing:0;}td,td img{vertical-align:top;}input,select,button,textarea{font-size:12px;font-family:Arial, Helvetica, sans-serif;margin:0;}input[type="text"],input[type="password"],textarea,input[type="email"],input[type="phone"],input[type="number"]{font:12px Arial, Helvetica, sans-serif;padding:0;}input[type="checkbox"]{vertical-align:bottom;}input[type="radio"]{vertical-align:text-bottom;}sub{vertical-align:sub;font-size:smaller;}sup{vertical-align:super;font-size:smaller;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}ul,ol{list-style:none;}html{overflow-y:scroll;overflow-x:auto;}html,body{height:100%;}body{line-height:1;color:#000;text-align:left;z-index:1;position:relative;}input [type='text']{padding:0;}textarea{resize:none;overflow:auto;}label,input[type="button"],input[type="submit"],button{cursor:pointer;}input[type="button"],input[type="reset"],input[type="submit"],button,input[type="text"],input[type="password"],textarea,input[type="email"],input[type="tel"],input[type="phone"],input[type="number"]{-webkit-appearance:none;}a,a:visited,a:hover,a:focus,a:active{text-decoration:none;}input[type="submit"]::-moz-focus-inner,button::-moz-focus-inner{border:0;padding:0;}input:invalid{outline:none;-moz-box-shadow:none;border:none;}::-ms-clear{display:none;}input,textarea,input[type="search"]:focus,:focus{outline:none;}
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+}
+.centering {
+    display: table;
+    width: 100%;
+}
+.centering > * {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
 /* --------------- Style to null --------------- */
 
 /*
@@ -121,6 +133,20 @@
     height: 300px;
     padding: 0 20px;
     margin: 0 auto;
+}
+.site__introduction{
+    margin: 0 257px 51px;
+    line-height: 24px;
+    text-align: center;
+}
+.site__panel{
+    padding: 0 31px;
+    text-align: justify;
+}
+.site__panel:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
 }
 .header-fix{
     position: fixed;
@@ -294,7 +320,41 @@
     padding-left: 20px;
     background: url("../img/icons-btn-white.png") no-repeat 0 50%;
 }
+.btn_add{
+    height: 46px;
+    color: #465863;
+    font-weight: 500;
+    background-color: #fed400;
+    vertical-align: top;
+}
+.btn_add{
+
+}
 /* --------------- /btn --------------- */
+
+/* --------------- search --------------- */
+.search{
+    display: inline-block;
+    position: relative;
+}
+.search input{
+    width: 240px;
+    height: 46px;
+    padding: 0 35px 0 17px;
+    border: 1px solid #e3e6e8;
+    border-radius: 5px;
+    font: 15px 'Fira Sans', sans-serif;
+}
+.search button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 46px;
+    border: none;
+    background: url("../img/iocns-search.png") 4px 50% no-repeat;
+}
+/* --------------- /search --------------- */
 
 /* --------------- language --------------- */
 .language{
@@ -1007,6 +1067,42 @@ a.social-ok{
     background-position: -117px 50%;
 }
 /* --------------- /social --------------- */
+
+/* --------------- statistic --------------- */
+.statistic{
+    margin-bottom: 26px;
+}
+.statistic:after{
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+.statistic li{
+    display: inline-block;
+    width: 33%;
+    padding: 3px 40px 9px;
+    border-left: 1px solid #e3e6e8;
+    font-size: 20px;
+    line-height: 24px;
+    vertical-align: top;
+    text-align: center;
+}
+.statistic li:first-child {
+    border: none;
+}
+.statistic li span{
+    display: block;
+}
+.statistic__num{
+    font-size: 70px;
+    font-weight: 200;
+    line-height: 72px;
+}
+.statistic__title{
+    font-size: 15px;
+    color: #bfbfbf;
+}
+/* --------------- /statistic --------------- */
 
 /* --------------- footer --------------- */
 .footer__logo{
