@@ -177,13 +177,13 @@ input[type="search"]::-webkit-search-cancel-button {
 .header_platform{
     height: 170px;
     background: url("../img/bg-header-platform.png") no-repeat bottom center,
-        url("../img/bg-header.jpg") no-repeat top center #0966a2;
+        url("../img/bg-header.jpg") no-repeat top center/cover #0966a2;
 }
 .header-fix{
     position: fixed;
     top: 0;
     height: 65px;
-    background: url("../img/bg-header.jpg") no-repeat top center #0966a2;
+    background: url("../img/bg-header.jpg") no-repeat top center/cover #0966a2;
     transform: translateY(0);
     -webkit-transform: translateY(0);
 }

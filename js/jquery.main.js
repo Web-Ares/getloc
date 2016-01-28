@@ -465,6 +465,7 @@ Popup.prototype = {
         var self = this;
         self.core = self.core();
         self.core.build();
+        console.log('22')
     },
     core: function (){
         var self = this;
