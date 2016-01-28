@@ -1592,7 +1592,7 @@ a.paginator__next:hover{
     right: 2px;
     width: 19px;
     height: 1px;
-    background-color: #c3161c;
+    background-color: #fff;
 }
 .popup__close > span{
     top: 7px;
