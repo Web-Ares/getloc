@@ -150,11 +150,29 @@ input[type="search"]::-webkit-search-cancel-button {
     display: inline-block;
     width: 100%;
 }
-.site__panel span{
+.site__panel span,
+.site__panel a{
     display: inline-block;
 }
 .site__panel .site__title{
     display: inline-block;
+}
+.site__back{
+    position: relative;
+    margin-left: 25px;
+    color: #18baea;
+    border-bottom: 1px solid #18baea;
+}
+.site__back:before{
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: -25px;
+    width: 12px;
+    height: 10px;
+    background: url("../img/icons-arrows.png") no-repeat 0 0;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 .header-fix{
     position: fixed;
@@ -466,6 +484,30 @@ input[type="search"]::-webkit-search-cancel-button {
     cursor: default;
 }
 /* --------------- /language --------------- */
+
+/* --------------- breadcrumbs --------------- */
+.breadcrumbs{
+    margin-bottom: 23px;
+    padding: 17px 21px;
+    border-radius: 5px;
+    background-color: #f4f5f6;
+}
+.breadcrumbs a{
+    position: relative;
+    margin-right: 20px;
+    border-bottom: 1px solid #18baea;
+    color: #18baea;
+}
+.breadcrumbs a:after{
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -15px;
+    width: 5px;
+    height: 8px;
+    background: url("../img/icons-breadcrumbs.png") no-repeat 0 0;
+}
+/* --------------- /breadcrumbs --------------- */
 
 /* --------------- next-step --------------- */
 .next-step{
@@ -1148,15 +1190,24 @@ a.social-ok{
     width: 100%;
     margin-bottom: 30px;
     color: #323232;
+    border-bottom: 2px solid #e3e6e8;
 }
 .projects td{
-    height: 50px;
-    padding: 0 15px;
+    padding: 17px 20px 18px 30px;
     border-bottom: 1px solid #e3e6e8;
     vertical-align: middle;
+}
+.projects td:first-child{
+    padding-left: 0;
+}
+.projects_list td{
+    padding: 17px 15px;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+.projects_list td:first-child{
+    padding-left: 15px;
 }
 .projects thead td{
     height: 46px;
@@ -1176,10 +1227,12 @@ a.social-ok{
     padding-left: 22px;
 }
 .projects__picking{
+    padding-left: 22px;
     color: #ccc;
     background: url("../img/icons-cogwheel.png") no-repeat 0 50%;
 }
 .projects__done{
+    padding-left: 22px;
     background: url("../img/icons-btn-green.png") no-repeat 0 50%;
 }
 /* --------------- /projects --------------- */
