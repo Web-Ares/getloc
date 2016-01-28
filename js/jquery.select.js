@@ -96,17 +96,35 @@ var AresSelect = function( params ){
                     self.popup = $( '<div class="ares-select__popup" id="ares-select__popup' + id + '"></div>' );
 
                     if ( self.wrap.parents(".discount__selects-language").length ){
+                        var arr = self.wrap.parents().data('language');
+                        self.core.addOptions(arr);
+                        self.obj.find( 'option' ).each( function(i){
+                            if ( i==0 ){
+                                var curItem = $( this );
+                                if( i == curIndex ){
+                                    list.append( '<li class="active">' + curItem.text() + '</li>' );
+                                } else {
+                                    list.append( '<li>' + curItem.text() + '</li>' );
+                                }
+                            } else {
+                                var curItem = $( this),
+                                    src = curItem.data('src');
+                                if( i == curIndex ){
+                                    list.append( '<li class="active"><img src="'+src+'">' + curItem.text() + '</li>' );
+                                } else {
+                                    list.append( '<li><img src="'+src+'">' + curItem.text() + '</li>' );
+                                }
+                            }
+                        } );
 
                     } else {
                         self.obj.find( 'option' ).each( function(i){
                             var curItem = $( this );
-
                             if( i == curIndex ){
                                 list.append( '<li class="active">' + curItem.text() + '</li>' );
                             } else {
                                 list.append( '<li>' + curItem.text() + '</li>' );
                             }
-
                         } );
                     }
 
@@ -176,6 +194,14 @@ var AresSelect = function( params ){
                     } );
 
                 },
+                addOptions: function(arr){
+                    for ( var i =0; i<arr.languages.length; i++ ){
+                        //console.log(arr.languages[i].name);
+                        var selectID = self.obj.attr('id'),
+                            option = $('<option value="'+selectID+'_'+i+'" data-src="'+arr.languages[i].src+'">'+arr.languages[i].name+'</option>');
+                        self.obj.append(option);
+                    }
+                },
                 hidePopup: function(){
                     self.opened = false;
                     if( !self.showType ){
@@ -194,7 +220,21 @@ var AresSelect = function( params ){
                 },
                 controls: function() {
                     self.obj.on( 'change', function() {
-                        self.text.text( $( this ).find( 'option:selected' ).text() );
+                        if ( self.wrap.parents(".discount__selects-language").length ){
+                            self.text.text( $( this ).find( 'option:selected' ).text() );
+
+                            var txt = $( this ).find( 'option:selected' ).text(),
+                                src = null;
+                            if ( $( this ).find( 'option:selected' ).data('src') == undefined ){
+                                self.text.html(txt);
+                            } else {
+                                src = $( this ).find( 'option:selected' ).data('src');
+                                self.text.html('<img src="'+src+'">' + txt + '');
+                            }
+
+                        } else {
+                            self.text.text( $( this ).find( 'option:selected' ).text() );
+                        }
                     } );
 
                     if( self.optionType == 1 && !self.device ){
