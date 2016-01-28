@@ -22,7 +22,7 @@
     font-size: 15px;
     font-family: 'Fira Sans', sans-serif;
     cursor: pointer;
-    background: #f0f0f0;
+    background: #fff;
     border: 3px solid transparent;
     -webkit-transition: border 0.3s ease;
     transition: border 0.3s ease;
@@ -43,7 +43,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     text-align: center;
-    padding: 10px 23px 6px 17px;
+    padding: 8px 27px 0 30px;
 
 }
 .ares-select__item img {
