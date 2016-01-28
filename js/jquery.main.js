@@ -12,6 +12,10 @@ $(function(){
         Slider($(this));
     });
 
+    $('.popup').each(function(){
+        popup = new Popup($(this));
+    });
+
     $('.site').delegate( "input", "focus blur", function() {
         var elem = $( this );
         setTimeout(function() {

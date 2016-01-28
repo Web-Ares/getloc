@@ -477,18 +477,98 @@
                 <div class="order-popup">
                     <!-- order-popup__content -->
                     <div class="order-popup__content">
-                        <h2>Planetarium small Order</h2>
-                        <form class="order__form" action="#">
-                            <input type="text" name="order-popup__name" id="order-popup__name" placeholder="Your name"/>
-                            <input type="tel" name="order-popup__email" id="order-popup__email" placeholder="Email"/>
-                            <input type="hidden" name="order-popup__type" id="order-popup__type"/>
-                            <textarea name="order-popup__message" id="order-popup__message" placeholder="Comment"></textarea>
-                            <button class="btn btn_order" name="order-popup__send" id="order-popup__send">SEND ORDER</button>
-                            <p>Our sales will connect to your soon for confirm your order and other details</p>
-                            <!-- popup__close -->
-                            <button class="popup__close">Close <span></span></button>
-                            <!-- /popup__close -->
-                        </form>
+
+                        <!-- discount__layout -->
+                        <div class="discount__layout">
+
+                            <!-- site__title -->
+                            <h2 class="site__title">Добавьте свой сайт на тестирование</h2>
+                            <!-- /site__title -->
+
+                            <!-- discount__introduction -->
+                            <div class="discount__introduction">
+                                <p>Заполните форму и когда проект запуститься, у вас будет возможность пользоваться услугами сервиса со скидкой.</p>
+                            </div>
+                            <!-- /discount__introduction -->
+
+                            <!-- /discount__form -->
+                            <div class="discount__form">
+                                <form method="get" action="#" novalidate>
+
+                                    <fieldset>
+                                        <label for="discount__email">Ваша эл. почта *</label>
+                                        <input type="email" id="discount__email"  placeholder="yourmail@gmai" required/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="discount__name">Имя, фамилия</label>
+                                        <input type="text" id="discount__name"/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="discount__address">Адрес вашего сайта *</label>
+                                        <input type="text" id="discount__address" placeholder="http://yoursite.ru" required/>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <label for="discount__phone">Номер телефона</label>
+                                        <input type="tel" id="discount__phone"/>
+                                    </fieldset>
+
+                                    <fieldset class="discount__language">
+                                        <label>Язык перевода *</label>
+
+                                        <!-- options__selects-wrap -->
+                                        <div class="discount__selects-language" data-language='{
+                                        "languages": [
+                                            {
+                                                "id": 1,
+                                                "name": "Английский",
+                                                "src": "img/icons-en.png"
+                                            },
+                                            {
+                                                "id": 2,
+                                                "name": "Русский",
+                                                "src": "img/icons-en.png"
+                                            },
+                                            {
+                                                "id": 3,
+                                                "name": "Украинский",
+                                                "src": "img/icons-ua.png"
+                                            }
+                                        ]
+                                        }'>
+
+                                            <select name="lang_1" id="lang_1" required>
+                                                <option value="0">Выберите язык</option>
+                                                <!--<option value="select1_1">Все виды</option>-->
+                                                <!--<option value="select1_2">Английский</option>-->
+                                                <!--<option value="select1_3">Русский</option>-->
+                                            </select>
+
+                                            <a href="#" class="discount__languadge-add">Добавить язык перевода</a>
+
+                                        </div>
+                                        <!-- /discount__selects-language -->
+
+                                    </fieldset>
+
+                                    <!-- btn -->
+                                    <button class="btn btn_add">
+                                        <span>Добавить свой сайт</span>
+                                    </button>
+                                    <!-- /btn -->
+
+                                </form>
+                            </div>
+                            <!-- discount__form -->
+
+                        </div>
+                        <!-- /discount__layout -->
+
+                        <!-- popup__close -->
+                        <button class="popup__close"><span></span></button>
+                        <!-- /popup__close -->
                     </div>
                     <!-- /order-popup_content -->
                 </div>
