@@ -32,6 +32,14 @@ $(function(){
         }
     });
 
+    $('.logo').on({
+        'click':function(){
+            if ($(window).scrollTop() < 1){
+                return false
+            }
+        }
+    });
+
     start = $(".site__header").offset().top + $(".site__header").outerHeight();
     navigation();
 
