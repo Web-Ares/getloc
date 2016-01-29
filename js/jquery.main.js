@@ -159,7 +159,7 @@ var FormValidation = function (obj) {
                                     address: $('#discount__address').val(),
                                     language: $('.discount__language').val()
                                 },
-                                success: function (msg) {
+                                success: function (data) {
                                     $('.discount__layout').addClass('success');
                                     $('.discount__thanks').addClass('success');
                                     console.log(data);
