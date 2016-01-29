@@ -96,7 +96,7 @@ input[type="search"]::-webkit-search-cancel-button {
     min-height: 100%;
     min-width: 952px;
     overflow: hidden;
-    font: 15px 'Fira Sans', sans-serif;
+    font: 14px 'Fira Sans', sans-serif;
     color: #333;
     z-index: 1;
 }
@@ -266,7 +266,7 @@ input[type="search"]::-webkit-search-cancel-button {
     display: inline-block;
     border-radius: 5px;
     border: none;
-    font: 15px 'Fira Sans', sans-serif;
+    font: 14px 'Fira Sans', sans-serif;
     cursor: pointer;
 }
 .btn_header{
@@ -455,7 +455,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 0 35px 0 17px;
     border: 1px solid #e3e6e8;
     border-radius: 5px;
-    font: 15px 'Fira Sans', sans-serif;
+    font: 14px 'Fira Sans', sans-serif;
 }
 .search button{
     position: absolute;
@@ -500,7 +500,7 @@ input[type="search"]::-webkit-search-cancel-button {
     border-radius: 4px;
     background-color: #fff;
     line-height: 24px;
-    font-size: 15px;
+    font-size: 14px;
     text-align: center;
     visibility: hidden;
     opacity: 0;
@@ -612,7 +612,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding-top: 35px;
     background: url("../img/bg-header.jpg") no-repeat center -65px #0966a2;
     background-size: cover;
-    font-size: 15px;
+    font-size: 14px;
     color: #fff;
 }
 .promo .site__wrap {
@@ -693,7 +693,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .enroll__content a{
     padding-bottom: 2px;
-    font-size: 15px;
+    font-size: 14px;
     color: #333;
     border-bottom: 1px solid #333;
     transition: border-bottom-color .3s ease;
@@ -717,7 +717,7 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 390px;
     padding-top: 7px;
     padding-left: 109px;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 24px;
     background: url("../img/img-thanks.png") no-repeat 0 0;
     transition: opacity .3s ease, visibility .3s ease;
@@ -785,7 +785,7 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 100%;
     height: 39px;
     padding: 0 5px;
-    font: 15px 'Fira Sans', sans-serif;
+    font: 14px 'Fira Sans', sans-serif;
     transition: color .3s ease;
     -webkit-transition: color .3s ease;
 }
@@ -1088,7 +1088,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 0 10px;
     border: 3px solid transparent;
     border-radius: 5px;
-    font: 15px 'Fira Sans', sans-serif;
+    font: 14px 'Fira Sans', sans-serif;
     text-align: center;
     transition: border-color .3s ease;
     -wbkit-transition: border-color .3s ease;
@@ -1138,7 +1138,7 @@ fieldset.discount__language{
     vertical-align: top;
     position: relative;
     margin: 13px 0 0 26px;
-    font-size: 15px;
+    font-size: 14px;
     border-bottom: 1px solid #fff;
     background: none;
     color: #fff;
@@ -1178,7 +1178,7 @@ fieldset.discount__language{
     top: 71px;
     left: 50%;
     width: 560px;
-    font-size: 15px;
+    font-size: 14px;
     line-height: 24px;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
@@ -1265,7 +1265,7 @@ a.social-ok{
     line-height: 72px;
 }
 .statistic__title{
-    font-size: 15px;
+    font-size: 14px;
     color: #bfbfbf;
 }
 .statistic_col-4 li{
@@ -1610,7 +1610,7 @@ a.paginator__next:hover{
     width: 0;
     height: 0;
     padding-top: 10px;
-    font: 15px 'Fira Sans', sans-serif;
+    font: 14px 'Fira Sans', sans-serif;
     background: rgba(32, 32, 32, 0.7) none repeat scroll 0 0;
     opacity: 0;
     -webkit-transition: opacity 500ms ease-in-out 0s;

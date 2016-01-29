@@ -23,7 +23,7 @@ $(function(){
         }, 0 );
     });
 
-    $('.promo__more').on({
+    $('.anchor').on({
         'click':function(){
             var elementClick = $(this).attr("href");
             var destination = $(elementClick).offset().top - 100;
