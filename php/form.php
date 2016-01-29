@@ -16,7 +16,7 @@
 
     if ($_GET['discount'] == true) {
 
-        echo $name, $email, $phone, $address, $language;
+        echo $name, $email, $phone, $address, json_encode($language);
 
     }
 
