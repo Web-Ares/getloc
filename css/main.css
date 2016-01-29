@@ -657,10 +657,11 @@ input[type="search"]::-webkit-search-cancel-button {
 .promo__more:after{
     content: '';
     position: absolute;
-    top: 2px;
+    top: 50%;
     right: -16px;
     width: 10px;
     height: 12px;
+    margin-top: -6px;
     background-image: url("../img/icons-arrows-down.png");
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
