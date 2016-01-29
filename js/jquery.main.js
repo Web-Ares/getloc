@@ -71,6 +71,7 @@ $(function(){
 var FormValidation = function (obj) {
 
     var _obj = obj,
+        _action = _obj.find( 'form' ).attr( 'action' ),
         _inputs = _obj.find($("[required]")),
         _select = _obj.find( $("select[required]") );
 
@@ -122,7 +123,7 @@ var FormValidation = function (obj) {
 
                         if (_obj.hasClass('enroll__form')) {
                             $.ajax({
-                                url: 'php/form.php',
+                                url: _action,
                                 dataType: 'html',
                                 timeout: 20000,
                                 type: "GET",
@@ -131,8 +132,8 @@ var FormValidation = function (obj) {
                                     email: $('#enroll__email').val()
                                 },
                                 success: function (msg) {
-                                    $('.enroll__form').addClass('success')
-                                    $('.enroll__thanks').addClass('success')
+                                    $('.enroll__form').addClass('success');
+                                    $('.enroll__thanks').addClass('success');
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
@@ -144,6 +145,7 @@ var FormValidation = function (obj) {
                         }
 
                         if (_obj.hasClass('discount__form')) {
+
                             $.ajax({
                                 url: 'php/form.php',
                                 dataType: 'html',
@@ -155,7 +157,7 @@ var FormValidation = function (obj) {
                                     email: $('#discount__email').val(),
                                     phone: $('#discount__phone').val(),
                                     address: $('#discount__address').val(),
-                                    language: $('discount__language').val()
+                                    language: $('.discount__language').val()
                                 },
                                 success: function (msg) {
                                     $('.discount__layout').addClass('success');
