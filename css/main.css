@@ -1134,6 +1134,7 @@ fieldset.discount__language{
     border-bottom: 1px solid #fff;
     background: none;
     color: #fff;
+    line-height: 1.1;
     -webkit-transition: border-bottom 0.3s ease;
     transition: border-bottom 0.3s ease;
 }
