@@ -161,9 +161,6 @@ var FormValidation = function (obj) {
                                     $('.discount__layout').addClass('success');
                                     $('.discount__thanks').addClass('success');
                                     console.log(data);
-                                    console.log(data);
-                                    console.log(data);
-                                    console.log(data);
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
