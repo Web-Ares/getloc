@@ -34,7 +34,6 @@ var AresSelect2 = function( params ){
         },
         core: function(){
             var self = this;
-            console.log(101);
 
             return {
                 build: function(){

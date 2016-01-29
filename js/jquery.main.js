@@ -158,8 +158,9 @@ var FormValidation = function (obj) {
                                     language: $('discount__language').val()
                                 },
                                 success: function (msg) {
-                                    $('.discount__layout').addClass('success')
-                                    $('.discount__thanks').addClass('success')
+                                    $('.discount__layout').addClass('success');
+                                    $('.discount__thanks').addClass('success');
+                                    console.log(data);
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
