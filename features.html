@@ -344,28 +344,28 @@
                             </div>
                             <!-- /popup__introduction -->
 
-                            <!-- /discount__form -->
-                            <div class="discount__form">
+                            <!-- discount__form -->
+                            <div class="discount__form popup_form">
                                 <form method="get" action="#" novalidate>
 
                                     <fieldset>
-                                        <label for="discount__email">Ваша эл. почта *</label>
-                                        <input type="email" id="discount__email"  placeholder="yourmail@gmai" required/>
+                                        <label for="popup__email">Ваша эл. почта *</label>
+                                        <input type="email" id="popup__email"  placeholder="yourmail@gmai" required/>
                                     </fieldset>
 
                                     <fieldset>
-                                        <label for="discount__name">Имя, фамилия</label>
-                                        <input type="text" id="discount__name"/>
+                                        <label for="popup__name">Имя, фамилия</label>
+                                        <input type="text" id="popup__name"/>
                                     </fieldset>
 
                                     <fieldset>
-                                        <label for="discount__address">Адрес вашего сайта *</label>
-                                        <input type="text" id="discount__address" placeholder="http://yoursite.ru" required/>
+                                        <label for="popup__address">Адрес вашего сайта *</label>
+                                        <input type="text" id="popup__address" placeholder="http://yoursite.ru" required/>
                                     </fieldset>
 
                                     <fieldset>
-                                        <label for="discount__phone">Номер телефона</label>
-                                        <input type="tel" id="discount__phone"/>
+                                        <label for="popup__phone">Номер телефона</label>
+                                        <input type="tel" id="popup__phone"/>
                                     </fieldset>
 
                                     <fieldset class="discount__language">
@@ -437,8 +437,28 @@
                 <div class="thanks-popup">
                     <!-- thanks-popup__content -->
                     <div class="thanks-popup__content">
-                        <h2 class="thanks-popup__topic">Thank you!</h2>
-                        <p>Our manager will contact you!</p>
+
+                        <!-- discount__thanks -->
+                        <div class="discount__thanks">
+
+                            <img src="img/img-thanks.png" alt="img"/>
+
+                            <!-- discount__thanks-title -->
+                            <h2 class="discount__thanks-title">Спасибо большое за вашу заявку</h2>
+                            <!-- /discount__thanks-title -->
+
+                            <p>Мы добавили ваш сайт на просчёт текста. Мы можете посмотреть сколько там страниц, символов, слов и т.д.</p>
+                            <p>Мы также выслали вам письмо ссылкой на статистику по вашему сайту.</p>
+
+                            <!-- btn -->
+                            <a href="#" class="btn btn_2">
+                                <span>Посмотреть статистику</span>
+                            </a>
+                            <!-- /btn -->
+
+                        </div>
+                        <!-- /discount__thanks -->
+
                     </div>
                     <!-- /thanks-popup__content -->
                 </div>

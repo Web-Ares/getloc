@@ -280,7 +280,7 @@ input[type="search"]::-webkit-search-cancel-button {
     letter-spacing: -.2px;
     transition: background-color .3s ease;
     -webkit-transition: background-color .3s ease;
-    line-height: 1;
+    line-height: 17px;
 }
 .btn_header:hover{
     background-color: #54a3c7;
@@ -290,7 +290,7 @@ input[type="search"]::-webkit-search-cancel-button {
     padding: 10px 45px;
     border: 1px solid #18baea;
     color: #18baea;
-    line-height: 1;
+    line-height: 19px;
     transition: background-color .3s ease, border-color .3s ease, color .3s ease;
     -webkit-transition: background-color .3s ease, border-color .3s ease, color .3s ease;
 }
@@ -1697,3 +1697,20 @@ a.paginator__next:hover{
     background-color: #fff;
 }
 /* ----------------- /popup ------------------- */
+
+/* ----------------- thanks-popup ------------------- */
+.thanks-popup__content{
+    height: 326px;
+    width: 560px;
+    position: relative;
+}
+.thanks-popup__content > div{
+    top: 0;
+    left: 0;
+    text-align: center;
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+}
+/* ----------------- /thanks-popup ------------------- */

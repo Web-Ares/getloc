@@ -165,10 +165,9 @@ var FormValidation = function (obj) {
                                     address: $('#discount__address').val(),
                                     language: selectsVal
                                 },
-                                success: function (data) {
+                                success: function () {
                                     $('.discount__layout').addClass('success');
                                     $('.discount__thanks').addClass('success');
-                                    console.log(msg);
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
@@ -179,6 +178,41 @@ var FormValidation = function (obj) {
                             return false;
                         }
 
+                        if (_obj.hasClass('popup_form')) {
+
+                            var selectsVal = [];
+
+                            $.each( $('.discount__selects-language select'), function(i){
+                                selectsVal[i] = this.value;
+                            } );
+
+                            $.ajax({
+                                url: 'php/form.php',
+                                dataType: 'html',
+                                timeout: 20000,
+                                type: "GET",
+                                data: {
+                                    discount: 'true',
+                                    name: $('#popup__name').val(),
+                                    email: $('#popup__email').val(),
+                                    phone: $('#popup__phone').val(),
+                                    address: $('#popup__address').val(),
+                                    language: selectsVal
+                                },
+                                success: function (data) {
+                                    popup.core.show('thanks');
+                                    setTimeout(function () {
+                                        popup.core.hide('thanks')
+                                    }, 3000);
+                                },
+                                error: function (XMLHttpRequest) {
+                                    if (XMLHttpRequest.statusText != "abort") {
+                                        alert(XMLHttpRequest.statusText);
+                                    }
+                                }
+                            });
+                            return false;
+                        }
                     }
                     return false;
                 }
