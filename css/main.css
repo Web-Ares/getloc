@@ -231,8 +231,9 @@ input[type="search"]::-webkit-search-cancel-button {
 .btn_header{
     position: absolute;
     top: 0;
-    right: 61px;
-    padding: 8px 34px;
+    right: 63px;
+    height: 32px;
+    padding: 8px 30px;
     color: #fff;
     background-color: #3394c6;
     letter-spacing: -.2px;
@@ -587,6 +588,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .promo__more{
     position: relative;
+    padding-bottom: 2px;
     color: #fff;
     border-bottom: 1px solid #fff;
     font-weight: 600;
@@ -623,7 +625,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 /* --------------- enroll --------------- */
 .enroll{
-    height: 154px;
+    height: 153px;
     margin-bottom: 69px;
     background-color: #ffd400;
 }
@@ -632,13 +634,14 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .enroll__content{
     width: 380px;
-    padding-top: 25px;
-    padding-left: 61px;
+    padding-top: 24px;
+    padding-left: 59px;
     font-size: 24px;
     line-height: 24px;
     background: url("../img/icons-enroll.png") no-repeat 0 27px;
 }
 .enroll__content a{
+    padding-bottom: 2px;
     font-size: 15px;
     color: #333;
     border-bottom: 1px solid #333;
@@ -693,8 +696,8 @@ input[type="search"]::-webkit-search-cancel-button {
 .enroll__email-box{
     display: inline-block;
     width: 250px;
-    height: 45px;
-    padding-left: 35px;
+    height: 46px;
+    padding-left: 30px;
     border: 3px solid #fff;
     vertical-align: middle;
     border-radius: 5px;
@@ -744,8 +747,8 @@ input[type="search"]::-webkit-search-cancel-button {
 /* --------------- advantages --------------- */
 .advantages{
     position: relative;
-    margin-bottom: 73px;
-    padding-bottom: 78px;
+    margin-bottom: 69px;
+    padding-bottom: 81px;
     border-bottom: 1px solid #e3e6e8;
     text-align: center;
 }
@@ -754,7 +757,7 @@ input[type="search"]::-webkit-search-cancel-button {
     line-height: 24px;
 }
 .advantages__items{
-    margin: 0 -15px 44px;
+    margin: 0 -15px 43px;
     text-align: justify;
 }
 .advantages__items:after{
@@ -776,7 +779,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .advantages__img{
     height: 125px;
-    margin-bottom: 30px;
+    margin-bottom: 32px;
 }
 .advantages__title{
     margin-bottom: 13px;
@@ -790,7 +793,7 @@ input[type="search"]::-webkit-search-cancel-button {
 .application{
     position: relative;
     margin-bottom: 69px;
-    padding-bottom: 49px;
+    padding-bottom: 48px;
     border-bottom: 1px solid #e3e6e8;
     text-align: center;
 }
@@ -820,9 +823,14 @@ input[type="search"]::-webkit-search-cancel-button {
 .application-icon{
     width: 112px;
     height: 112px;
-    margin-bottom: 17px;
+    margin-bottom: 19px;
     border: 1px solid #e1e5e9;
     border-radius: 100px;
+    transition: border-color .3s ease;
+    -webkit-transition: border-color .3s ease;
+}
+.application-icon:hover{
+    border-color: #18baea;
 }
 .application-icon > div{
     display: table-cell;
@@ -1067,7 +1075,8 @@ fieldset.discount__language{
     width: 100%;
 }
 .discount__introduction{
-    margin: 0 184px 40px;
+    margin: 0 184px 38px;
+    padding-top: 3px;
     line-height: 24px;
     text-align: center;
 }
