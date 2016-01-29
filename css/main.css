@@ -409,7 +409,8 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .btn_add{
     height: 46px;
-    padding: 14px 43px 0 39px;
+    line-height: 46px;
+    padding: 0 43px 0 39px;
     color: #465863;
     font-weight: 500;
     background-color: #fed400;
@@ -952,7 +953,7 @@ input[type="search"]::-webkit-search-cancel-button {
     height: 45px;
     margin: 11px auto 12px;
     font-size: 20px;
-    line-height: 45px;
+    line-height: 47px;
     color: #fff;
     border-radius: 50px;
     background-color: #18baea;
