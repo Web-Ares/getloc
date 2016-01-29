@@ -280,14 +280,17 @@ input[type="search"]::-webkit-search-cancel-button {
     letter-spacing: -.2px;
     transition: background-color .3s ease;
     -webkit-transition: background-color .3s ease;
+    line-height: 1;
 }
 .btn_header:hover{
     background-color: #54a3c7;
 }
 .btn_1{
+    height: 40px;
     padding: 10px 45px;
     border: 1px solid #18baea;
     color: #18baea;
+    line-height: 1;
     transition: background-color .3s ease, border-color .3s ease, color .3s ease;
     -webkit-transition: background-color .3s ease, border-color .3s ease, color .3s ease;
 }
@@ -381,6 +384,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-left: 5px;
     padding: 14px 28px;
     color: #fff;
+    line-height: 1;
     background-color: #18baea;
     transition: background-color .3s ease;
     -webkit-transition: background-color .3s ease;
@@ -477,6 +481,7 @@ input[type="search"]::-webkit-search-cancel-button {
     font: 400 14px 'Fira Sans', sans-serif;
     transition: color .3s ease, border-color .3s ease;
     -webkit-transition: color .3s ease, border-color .3s ease;
+    line-height: 1;
 }
 .language:hover .language__btn{
     border-color: #85bdd7;
@@ -936,8 +941,8 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 45px;
     height: 45px;
     margin: 11px auto 12px;
-    padding-top: 11px;
     font-size: 20px;
+    line-height: 45px;
     color: #fff;
     border-radius: 50px;
     background-color: #18baea;
@@ -1272,7 +1277,7 @@ a.social-ok{
 .platform{
     position: relative;
     margin-bottom: 73px;
-    padding: 105px 0 74px;
+    padding: 105px 0 19px;
     border-bottom: 1px solid #e3e6e8;
 }
 .platform__introduction{
@@ -1283,7 +1288,7 @@ a.social-ok{
     text-align: center;
 }
 .platform__list li{
-    margin-bottom: 45px;
+    margin-bottom: 53px;
     padding-left: 97px;
 }
 .platform__list li:nth-child(even){
@@ -1310,14 +1315,16 @@ a.social-ok{
 
 /* --------------- function --------------- */
 .function{
-    padding-bottom: 94px;
+    padding-bottom: 86px;
     color: #323333;
     text-align: center;
 }
 .function ul{
     display: inline-block;
     vertical-align: top;
-    width: 36%;
+    width: 29%;
+    padding-top: 17px;
+    margin: 0 13px 0 66px;
 }
 .function li{
     padding-left: 30px;
@@ -1390,10 +1397,10 @@ a.social-ok{
     width: 32px;
     height: 32px;
     margin: 0 6px;
-    padding-top: 7px;
     border: 1px solid transparent;
     border-radius: 50px;
     color: #333;
+    line-height: 32px;
     transition: color .3s ease, border-color .3s ease, opacity .3s ease;
     -webkit-transition: color .3s ease, border-color .3s ease, opacity .3s ease;
 }
@@ -1645,41 +1652,48 @@ a.paginator__next:hover{
     background-color: #3e4f59;
     color: #fff;
 }
+.popup__introduction {
+    margin: 0 90px 38px;
+    padding-top: 3px;
+    line-height: 24px;
+    text-align: center;
+}
 .popup__close{
     position: absolute;
-    top: 22px;
-    right: 21px;
+    top: 20px;
+    right: 20px;
+    height: 24px;
+    width: 24px;
     border: none;
-    padding: 0 37px 0 0;
     background: none;
     color: #c3161c;
     letter-spacing: .5px;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
 }
-.popup__close > span,
-.popup__close > span:before {
+.popup__close:before,
+.popup__close:after {
     content: '';
     display: block;
     position: absolute;
-    right: 2px;
-    width: 19px;
-    height: 1px;
+    background-color: #6f7c83;
+    transition: background-color .3s ease-in-out;
+    -webkit-transition: background-color .3s ease-in-out;
+}
+.popup__close:after {
+    top: 11px;
+    right: 0;
+    width: 24px;
+    height: 2px;
+}
+.popup__close:before{
+    top: 0;
+    left: 11px;
+    width: 2px;
+    height: 24px;
+}
+.popup__close:hover:after,
+.popup__close:hover:before{
     background-color: #fff;
-}
-.popup__close > span{
-    top: 7px;
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    transition: transform 1s ease-in-out;
-    -webkit-transition: transform 1s ease-in-out;
-}
-.popup__close > span:before{
-    top: -9px;
-    left: 9px;
-    width: 1px;
-    height: 19px;
-}
-.popup__close:hover > span{
-    transform: rotate(0deg);
-    -webkit-transform: rotate(0deg);
 }
 /* ----------------- /popup ------------------- */
