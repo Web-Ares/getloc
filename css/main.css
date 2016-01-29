@@ -1470,7 +1470,7 @@ a.paginator__next:hover{
 }
 .gallery__item img.gallery__item_3rd {
     right: 95px;
-    bottom: -31px;
+    bottom: -34px;
 }
 .gallery__item img.gallery__item_3rd + img.gallery__item_2nd {
     right: 26px;
