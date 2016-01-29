@@ -12,6 +12,7 @@
 .ares-select{
     position: relative;
     width: 223px;
+    margin-left: 2px;
     display: inline-block;
     vertical-align: top;
     border-radius: 5px;
