@@ -25,7 +25,7 @@ $(function(){
 
     $('.anchor').on({
         'click':function(){
-            var elementClick = $(this).attr("href");
+            var elementClick = $(this).data("href");
             var destination = $(elementClick).offset().top - 100;
             jQuery("html:not(:animated),body:not(:animated)").animate({scrollTop: destination}, 800);
             return false;
