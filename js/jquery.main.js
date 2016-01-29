@@ -146,6 +146,12 @@ var FormValidation = function (obj) {
 
                         if (_obj.hasClass('discount__form')) {
 
+                            var selectsVal = [];
+
+                            $.each( $('.discount__selects-language select'), function(i){
+                                selectsVal[i] = this.value;
+                            } );
+
                             $.ajax({
                                 url: 'php/form.php',
                                 dataType: 'html',
@@ -157,12 +163,12 @@ var FormValidation = function (obj) {
                                     email: $('#discount__email').val(),
                                     phone: $('#discount__phone').val(),
                                     address: $('#discount__address').val(),
-                                    language: $('.discount__language').val()
+                                    language: selectsVal
                                 },
                                 success: function (msg) {
                                     $('.discount__layout').addClass('success');
                                     $('.discount__thanks').addClass('success');
-                                    console.log(data);
+                                    console.log(msg);
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
