@@ -431,10 +431,11 @@ input[type="search"]::-webkit-search-cancel-button {
 .btn_add span:after,
 .btn_add span:before {
     position: absolute;
-    top: 7px;
+    top: 50%;
     left: 0;
     width: 12px;
     height: 2px;
+    margin-top: -2px;
     background-color: #465863;
     content: '';
 }
@@ -1045,7 +1046,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .people__slider .swiper-button-next{
     right: 0;
-    background-position-x: -28px;
+    background-position: -28px 100px;
 }
 .people__slider .swiper-button-prev{
     left: 0;
