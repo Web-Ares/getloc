@@ -1648,6 +1648,9 @@ a.paginator__next:hover{
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
 }
+.popup__form{
+    max-width: 460px;
+}
 .popup__content {
     display: none;
     width: 100%;
