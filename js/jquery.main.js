@@ -186,7 +186,7 @@ var FormValidation = function (obj) {
                             return false;
                         }
 
-                        if (_obj.hasClass('popup_form')) {
+                        if (_obj.hasClass('popup__form')) {
 
                             var selectsVal = [];
 
