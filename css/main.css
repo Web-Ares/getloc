@@ -1075,13 +1075,13 @@ input[type="search"]::-webkit-search-cancel-button {
     opacity: 0;
     visibility: hidden;
 }
-.discount__form fieldset{
+.discount__layout fieldset{
     display: inline-block;
     width: 228px;
     margin-bottom: 14px;
     text-align: center;
 }
-.discount__form label{
+.discount__layout label{
     display: block;
     width: 228px;
     margin-bottom: 2px;
@@ -1090,10 +1090,10 @@ input[type="search"]::-webkit-search-cancel-button {
     -wbkit-transition: color .3s ease;
     text-align: center;
 }
-.discount__form .focused label{
+.discount__layout .focused label{
     color: #fff;
 }
-.discount__form input{
+.discount__layout input{
     width: 98%;
     height: 42px;
     padding: 0 10px;
@@ -1104,16 +1104,16 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: border-color .3s ease;
     -wbkit-transition: border-color .3s ease;
 }
-.discount__form .focused input{
+.discount__layout .focused input{
     border-color: #18baea;
 }
-.discount__form .error input{
+.discount__layout .error input{
     border-color: #ff6353;
 }
-.discount__form .error input::-webkit-input-placeholder {color: #ff6353}
-.discount__form .error input::-moz-placeholder          {color: #ff6353}
-.discount__form .error input:-moz-placeholder           {color: #ff6353}
-.discount__form .error input:-ms-input-placeholder      {color: #ff6353}
+.discount__layout .error input::-webkit-input-placeholder {color: #ff6353}
+.discount__layout .error input::-moz-placeholder          {color: #ff6353}
+.discount__layout .error input:-moz-placeholder           {color: #ff6353}
+.discount__layout .error input:-ms-input-placeholder      {color: #ff6353}
 fieldset.discount__language{
     width: 100%;
     text-align: left;
