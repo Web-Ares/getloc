@@ -8,6 +8,10 @@ $(function(){
         new FormValidation ( $(this) )
     } );
 
+    $.each( $('.popup__form'), function(){
+        new FormValidation ( $(this) )
+    } );
+
     $('.swiper-container').each(function () {
         Slider($(this));
     });
