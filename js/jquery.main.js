@@ -81,7 +81,6 @@ $(function(){
 
 } );
 var FormValidation = function (obj) {
-
     var _obj = obj,
         _action = _obj.find( 'form' ).attr( 'action' ),
         _inputs = _obj.find($("[required]")),
@@ -192,6 +191,7 @@ var FormValidation = function (obj) {
 
                         if (_obj.hasClass('popup__form')) {
 
+                            console.log('11')
                             var selectsVal = [];
 
                             $.each( $('.discount__selects-language select'), function(i){
