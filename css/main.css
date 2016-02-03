@@ -140,6 +140,17 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-transition: -webkit-transform .3s ease;
     z-index: 3;
 }
+.site__header_inner {
+    background: #434954;
+}
+.site__header_inner .language__btn {
+    border: 1px solid #5f646d;
+    color: #777b83;
+}
+.site__header_inner .language:hover .language__btn {
+    border-color: #8e9298;
+    color: #9fa1a6;
+}
 .site__header-layout {
     position: relative;
     width: 992px;
@@ -506,6 +517,7 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-top: 10px;
     padding: 10px 0;
     border-radius: 4px;
+    box-shadow: 0 2px 30px 0 rgba( 1, 1, 1, .2);
     background-color: #fff;
     line-height: 24px;
     font-size: 14px;
@@ -543,13 +555,15 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .language__list a{
     display: block;
-    transition: color .3s ease;
-    -webkit-transition: color .3s ease;
+    padding: 0 0 0 20px;
+    transition: color .3s ease, background .3s ease;
+    -webkit-transition: color .3s ease, background .3s ease;
     color: #333;
 }
 .language__list .active,
 .language__list a:hover{
     color: #18baea;
+    background: #ebf8fd;
 }
 .language__list .active{
     cursor: default;
