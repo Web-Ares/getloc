@@ -33,7 +33,7 @@ $(function(){
 
     $(window).scroll(function() {
         navigation();
-    })
+    });
 
     function navigation(){
         scrolling = $(window).scrollTop();
