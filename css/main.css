@@ -521,7 +521,6 @@ input[type="search"]::-webkit-search-cancel-button {
     background-color: #fff;
     line-height: 24px;
     font-size: 14px;
-    text-align: center;
     visibility: hidden;
     opacity: 0;
     transition: visibility .3s ease, opacity .3s ease;
