@@ -140,17 +140,6 @@ input[type="search"]::-webkit-search-cancel-button {
     -webkit-transition: -webkit-transform .3s ease;
     z-index: 3;
 }
-.site__header_inner {
-    background: #434954;
-}
-.site__header_inner .language__btn {
-    border: 1px solid #5f646d;
-    color: #777b83;
-}
-.site__header_inner .language:hover .language__btn {
-    border-color: #8e9298;
-    color: #9fa1a6;
-}
 .site__header-layout {
     position: relative;
     width: 992px;
