@@ -1260,12 +1260,12 @@ fieldset.discount__language{
     height: 62px;
     margin-left: 6px;
     border-radius: 100px;
-    background: url("../img/icons-social.png") no-repeat 0 0 #52616a;
+    background: url("../img/icons-social.png") no-repeat 0 0 #565c65;
     transition: background-color .3s ease;
     -webkit-transition: background-color .3s ease;
 }
 .social a:hover{
-    background-color: #18baea;
+    background-color: #696d76;
 }
 a.social-vk{
     background-position: 26px 50%;
