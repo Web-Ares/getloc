@@ -166,7 +166,7 @@ input[type="search"]::-webkit-search-cancel-button {
     bottom: 0;
     height: 300px;
     padding-top: 61px;
-    background-color: #3e4f59;
+    background-color: #434954;
 }
 .site__footer-layout {
     position: relative;
@@ -228,6 +228,13 @@ input[type="search"]::-webkit-search-cancel-button {
     background: #434954;
     transform: translateY(0);
     -webkit-transform: translateY(0);
+}
+.header-fix .header__menu .active,
+.header-fix .header__menu a:hover{
+    background-color: #565c65;
+}
+.header-fix .btn_header{
+    background-color: #696d76;
 }
 /* --------------- /site --------------- */
 
