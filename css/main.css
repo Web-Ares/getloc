@@ -1168,6 +1168,14 @@ fieldset.discount__language{
 .discount__languadge-add:hover {
     border-bottom: 1px solid transparent;
 }
+.discount__languadge-add:hover:before,
+.discount__languadge-add:hover:after {
+    background: #18baea;
+}
+.discount__languadge-delete:hover:before,
+.discount__languadge-delete:hover:after{
+    background: #ff6353;
+}
 .discount__languadge-delete:after,
 .discount__languadge-add:after,
 .discount__languadge-delete:before,
@@ -1179,6 +1187,8 @@ fieldset.discount__language{
     height: 2px;
     background: #fff;
     content:'';
+    -webkit-transition: background .3s ease;
+    transition: background .3s ease;
 }
 .discount__languadge-delete:after,
 .discount__languadge-add:after {
@@ -1446,6 +1456,10 @@ a.paginator__next:hover{
     position: absolute;
     top: 0;
     left: 20px;
+    width: 90px;
+}
+.footer__logo img{
+    width: 100%;
 }
 .footer-menu{
     position: absolute;
