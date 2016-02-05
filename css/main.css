@@ -1412,13 +1412,16 @@ a.social-ok{
 }
 /* --------------- /projects --------------- */
 
-/* --------------- paginator --------------- */
-.paginator{
+/* --------------- pagination --------------- */
+.pagination{
     margin-bottom: 50px;
     text-align: center;
 }
-.paginator a,
-.paginator span{
+.pagination li{
+    display: inline-block;
+    vertical-align: middle;
+}
+.pagination a{
     display: inline-block;
     width: 32px;
     height: 32px;
@@ -1430,24 +1433,37 @@ a.social-ok{
     transition: color .3s ease, border-color .3s ease, opacity .3s ease;
     -webkit-transition: color .3s ease, border-color .3s ease, opacity .3s ease;
 }
-.paginator span,
-.paginator a:hover{
+.pagination .active a,
+.pagination a:hover{
     color: #66d1f1;
     border-color: #66d1f1;
 }
-a.paginator__prev,
-a.paginator__next{
+.pagination .active a{
+    cursor: default;
+}
+.pagination li:first-child a,
+.pagination li:last-child a{
     width: 13px;
     background: url("../img/icons-paginator.png") 0 50% no-repeat;
     text-indent: -9999px;
 }
-a.paginator__next{
+.pagination li:last-child a{
     background-position: -13px 50%;
 }
-a.paginator__prev:hover,
-a.paginator__next:hover{
+.pagination li:first-child a:hover,
+.pagination li:last-child a:hover{
     border-color: transparent;
     opacity: .5;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;
 }
 /* --------------- /paginator --------------- */
 
