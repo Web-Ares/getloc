@@ -225,7 +225,7 @@ input[type="search"]::-webkit-search-cancel-button {
     position: fixed;
     top: 0;
     height: 65px;
-    background: #0a7baf;
+    background: #434954;
     transform: translateY(0);
     -webkit-transform: translateY(0);
 }
