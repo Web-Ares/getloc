@@ -80,6 +80,7 @@ $(function(){
     });
 
 } );
+
 var FormValidation = function (obj) {
     var _obj = obj,
         _action = _obj.find( 'form' ).attr( 'action' ),
