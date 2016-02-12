@@ -1,7 +1,11 @@
 $(function(){
 
     $.each( $('.discount__form'), function(){
-        new FormValidation ( $(this) )
+        new FormValidation ( $(this) );
+    } );
+
+    $.each( $('.site__form'), function(){
+        new FormValidation ( $(this) );
     } );
 
     $.each( $('.enroll__form'), function(){
@@ -192,7 +196,6 @@ var FormValidation = function (obj) {
 
                         if (_obj.hasClass('popup__form')) {
 
-                            console.log('11')
                             var selectsVal = [];
 
                             $.each( $('.discount__selects-language select'), function(i){
@@ -226,8 +229,11 @@ var FormValidation = function (obj) {
                             });
                             return false;
                         }
+
+                    } else {
+                        return false;
+
                     }
-                    return false;
                 }
             });
             _inputs.on({
@@ -533,6 +539,16 @@ Popup.prototype = {
                 self.core.controls();
             },
             controls: function(){
+
+                $('.popup__content').on( 'click','.popup__open', function(){
+                    var curItem = $(this);
+                    self.core.hide();
+                    setTimeout( function(){
+                        self.core.show( curItem.attr( 'data-popup' ) );
+                    },500 );
+                    return false;
+                });
+
                 $('body').on( 'click','.popup__open', function(){
                     var curItem = $(this),
                         parentDropdown = curItem.parents(".dropdown"),
@@ -593,6 +609,11 @@ Popup.prototype = {
                 return scrollbarWidth;
             },
             show: function( className ){
+
+                if ( self.popup.hasClass( 'popup_opened' ) ){
+                    self.core.hide();
+                }
+
                 if (self.contents.height()+120 > self.window.height()){
                     self.popup.css ({
                         'overflow-y': "scroll"
