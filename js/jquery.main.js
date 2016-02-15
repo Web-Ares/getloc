@@ -21,10 +21,10 @@ $(function(){
     });
 
     $('.popup').each(function(){
-        popup = new Popup($(this));
+        new Popup($(this));
     });
 
-    $('.site').delegate( "input", "focus blur", function() {
+    $('body').delegate( "input", "focus blur", function() {
         var elem = $( this );
         setTimeout(function() {
             elem.parent().toggleClass( "focused", elem.is( ":focus" ) );
@@ -48,7 +48,7 @@ $(function(){
         }
     });
 
-    start = $(".site__header").offset().top + $(".site__header").outerHeight();
+    var start = $(".site__header").offset().top + $(".site__header").outerHeight();
     navigation();
 
     $(window).scroll(function() {
@@ -542,11 +542,15 @@ Popup.prototype = {
 
                 $('.popup__content').on( 'click','.popup__open', function(){
                     var curItem = $(this);
-                    self.core.hide();
-                    setTimeout( function(){
-                        self.core.show( curItem.attr( 'data-popup' ) );
-                    },500 );
+                    self.contents.css( 'display', '' );
+                    self.core.setPopupContent( curItem.attr( 'data-popup' ) );
                     return false;
+
+                    //self.core.show( curItem.attr( 'data-popup' ) );
+                    //self.btnClose = self.popup.find(".popup__close");
+                    //$('.popup_opened').find('#order-popup__type').val( curItem.attr( 'data-type' ) );
+                    //return false;
+
                 });
 
                 $('body').on( 'click','.popup__open', function(){
@@ -556,7 +560,7 @@ Popup.prototype = {
                     parentDropdown.removeClass("open");
                     linkDropdown.attr("aria-expanded", "false");
                     self.core.show( curItem.attr( 'data-popup' ) );
-                    popup.btnClose = self.popup.find(".popup__close");
+                    self.btnClose = self.popup.find(".popup__close");
                     $('.popup_opened').find('#order-popup__type').val( curItem.attr( 'data-type' ) );
                     return false;
                 } );
