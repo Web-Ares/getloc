@@ -1877,9 +1877,8 @@ a.social-ok{
     display: inline-block;
     vertical-align: top;
     text-align: left;
-    /* transform: translateY(-50%); */
-    /* -webkit-transform: translateY(-50%); */
-    top: 100px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
 }
 .popup__form{
     max-width: 460px;
