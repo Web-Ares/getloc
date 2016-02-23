@@ -62,10 +62,12 @@ $(function(){
     function navigation(){
         scrolling = $(window).scrollTop();
         if (scrolling > start) {
-            $('.site__header').addClass('header-fix')
+            $('.site__header').addClass('header-fix');
+            $('.program__sign-up').addClass('program-fix')
         }
         else{
-            $('.site__header').removeClass('header-fix')
+            $('.site__header').removeClass('header-fix');
+            $('.program__sign-up').removeClass('program-fix')
         }
     }
 

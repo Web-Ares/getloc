@@ -159,7 +159,7 @@ input[type="search"]::-webkit-search-cancel-button {
     width: 950px;
 }
 .site__footer {
-    z-index: 1;
+    z-index: 2;
     position: absolute;
     left: 0;
     right: 0;
@@ -2041,6 +2041,12 @@ a.social-ok{
 .program{
     padding-bottom: 136px;
     color:#333333;
+}
+.program-fix {
+    position: fixed;
+    top: 149px;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
 }
 .program__title{
     margin: 33px 0 56px;
