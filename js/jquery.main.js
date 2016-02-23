@@ -242,10 +242,8 @@ var FormValidation = function (obj) {
                                 },
                                 success: function () {
 
-                                    var curItem = $(this);
                                     popups.contents.css( 'display', '' );
-                                    popups.core.setPopupContent( curItem.data( 'popup' ) );
-                                    console.log(curItem)
+                                    popups.core.setPopupContent( 'end-registry' );
 
                                 },
                                 error: function (XMLHttpRequest) {
