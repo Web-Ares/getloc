@@ -183,12 +183,13 @@ var FormValidation = function (obj) {
                                     email: $('#forgot-pass__email').val()
                                 },
                                 success: function (msg) {
+
+                                    $('.forgot-pass__message').slideDown(300);
                                     $('.forgot-pass__message').addClass('success');
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
-                                        alert(XMLHttpRequest.statusText);
-                                    }
+                                        alert(XMLHttpRequest.statusText);                                    }
                                 }
                             });
                             return false;

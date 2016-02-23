@@ -2057,6 +2057,7 @@ a.social-ok{
     text-align: center;
 }
 .forgot-pass__message{
+    display: none;
     height: 101px;
     padding-top: 24px;
     line-height: 24px;
