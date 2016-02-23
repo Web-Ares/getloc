@@ -279,7 +279,7 @@ var FormValidation = function (obj) {
                                 },
                                 success: function () {
 
-                                    popup.core.show( 'popup__end-registry' );
+                                    popup.core.show( 'end-registry' );
 
                                 },
                                 error: function (XMLHttpRequest) {
