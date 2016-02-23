@@ -242,7 +242,10 @@ var FormValidation = function (obj) {
                                 },
                                 success: function () {
 
-                                    popups.core.controls();
+                                    var curItem = $(this);
+                                    popups.contents.css( 'display', '' );
+                                    popups.core.setPopupContent( curItem.attr( 'data-popup' ) );
+                                    return false;
 
                                 },
                                 error: function (XMLHttpRequest) {
