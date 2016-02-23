@@ -1,3 +1,5 @@
+var popups;
+
 $(function(){
 
     $.each( $('.discount__form'), function(){
@@ -25,7 +27,7 @@ $(function(){
     });
 
     $('.popup').each(function(){
-        new Popup($(this));
+       popups = new Popup($(this));
     });
 
     $('body').delegate( "input", "focus blur", function() {
@@ -278,10 +280,8 @@ var FormValidation = function (obj) {
                                     password: $('#password2').val()
                                 },
                                 success: function () {
-
-                                    new Popup($(this));
-
-                                    popup.core.show( 'end-registry' );
+console.log(popups)
+                                    popups.core.show( 'end-registry' );
 
                                 },
                                 error: function (XMLHttpRequest) {
