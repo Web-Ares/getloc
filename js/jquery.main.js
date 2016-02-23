@@ -16,7 +16,7 @@ $(function(){
         new FormValidation ( $(this) )
     } );
 
-    $.each( $('.popup__form'), function(){
+    $.each( $('.popup__registry'), function(){
         new FormValidation ( $(this) )
     } );
 
