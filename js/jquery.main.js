@@ -265,9 +265,9 @@ var FormValidation = function (obj) {
                             return false;
                         }
 
-                        if (_obj.hasClass('popup__registry')) {
+                        if ( _obj.hasClass( 'popup__registry' ) ) {
                             $.ajax({
-                                url: _action,
+                                url: 'php/form.php',
                                 dataType: 'html',
                                 timeout: 20000,
                                 type: "GET",
@@ -279,11 +279,11 @@ var FormValidation = function (obj) {
                                 },
                                 success: function () {
 
-                                    popup.core.show('popup__end-registry');
+                                    popup.core.show( 'popup__end-registry' );
 
                                 },
                                 error: function (XMLHttpRequest) {
-                                    if (XMLHttpRequest.statusText != "abort") {
+                                    if (XMLHttpRequest.statusText != 'abort') {
                                         alert(XMLHttpRequest.statusText);
                                     }
                                 }
@@ -292,6 +292,7 @@ var FormValidation = function (obj) {
                         }
 
                     } else {
+
                         return false;
 
                     }
