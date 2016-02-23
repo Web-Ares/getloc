@@ -4,6 +4,10 @@ $(function(){
         new FormValidation ( $(this) );
     } );
 
+    $.each( $('.program__sign-up'), function(){
+        new FormValidation ( $(this) );
+    } );
+
     $.each( $('.site__form'), function(){
         new FormValidation ( $(this) );
     } );
@@ -184,6 +188,35 @@ var FormValidation = function (obj) {
                                 success: function () {
                                     $('.discount__layout').addClass('success');
                                     $('.discount__thanks').addClass('success');
+                                },
+                                error: function (XMLHttpRequest) {
+                                    if (XMLHttpRequest.statusText != "abort") {
+                                        alert(XMLHttpRequest.statusText);
+                                    }
+                                }
+                            });
+                            return false;
+                        }
+
+                        if (_obj.hasClass('program__sign-up')) {
+
+                            $.ajax({
+                                url: 'php/program-send.php',
+                                dataType: 'html',
+                                timeout: 20000,
+                                type: "GET",
+                                data: {
+                                    organization: $('#organization').val(),
+                                    name: $('#contact-person').val(),
+                                    site: $('#site').val(),
+                                    phone: $('#phone').val(),
+                                    email: $('#email').val()
+                                },
+                                success: function (data) {
+                                    popup.core.show('thanks');
+                                    setTimeout(function () {
+                                        popup.core.hide('thanks')
+                                    }, 3000);
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
