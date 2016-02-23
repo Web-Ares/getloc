@@ -2058,7 +2058,7 @@ a.social-ok{
 }
 .forgot-pass__message{
     display: none;
-    height: 101px;
+    height: 78px;
     padding-top: 24px;
     line-height: 24px;
     opacity: 0;
@@ -2084,6 +2084,7 @@ a.social-ok{
 }
 .forgot-pass .site__form{
     margin: 0 0 20px;
+    padding-top: 23px;
     border-bottom: 0;
 }
 /*--------------/forgot-pass--------------*/
