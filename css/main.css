@@ -474,6 +474,21 @@ input[type="search"]::-webkit-search-cancel-button {
     transition: opacity .3s ease;
     -webkit-transition: opacity .3s ease;
 }
+.btn_3{
+    display: block;
+    width: 220px;
+    height: 46px;
+    margin: 0 auto 24px;
+    padding: 14px 0;
+    background-color: #18baea;
+    color: #fff;
+    line-height: 1;
+    transition: background-color .3s ease;
+    -webkit-transition: background-color .3s ease;
+}
+.btn_3:hover{
+    background-color: #2cc2ee;
+}
 .btn_discount{
     display: block;
     margin: 0 auto;
@@ -2020,22 +2035,57 @@ a.social-ok{
 }
 /* ----------------- /popup ------------------- */
 
-/* ----------------- thanks-popup ------------------- */
-.thanks-popup__content{
-    height: 326px;
-    width: 560px;
-    position: relative;
+/* ----------------- end-registry ------------------- */
+.end-registry{
+    width: 300px;
+    margin: -3px auto 29px;
+    font-weight: 300;
+    line-height: 24px;
+    color: #000;
 }
-.thanks-popup__content > div{
-    top: 0;
-    left: 0;
+.end-registry a{
+    color: #18baea;
+    text-decoration: underline;
+}
+/* ----------------- end-registry ------------------- */
+
+/*--------------forgot-pass--------------*/
+.forgot-pass{
+    width: 400px;
+    margin: 0 auto;
+    padding-top: 24px;
     text-align: center;
-    visibility: visible;
-    opacity: 1;
-    transform: translateX(0);
-    -webkit-transform: translateX(0);
 }
-/* ----------------- /thanks-popup ------------------- */
+.forgot-pass__message{
+    height: 101px;
+    padding-top: 24px;
+    line-height: 24px;
+    opacity: 0;
+    transform: scale(.8);
+    -webkit-transform: scale(.8);
+    transition: transform .3s ease, opacity .3s ease;
+    -webkit-transition: transform .3s ease, opacity .3s ease;
+}
+.forgot-pass__message.success{
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 1;
+}
+.forgot-pass__message a{
+    color: #18baea;
+    text-decoration: underline;
+}
+.forgot-pass input{
+    display: block;
+    margin-bottom: -11px;
+    border: 1px solid #d0d0d0;
+    border-radius: 5px;
+}
+.forgot-pass .site__form{
+    margin: 0 0 20px;
+    border-bottom: 0;
+}
+/*--------------/forgot-pass--------------*/
 
 /*-------------program------------*/
 .program{

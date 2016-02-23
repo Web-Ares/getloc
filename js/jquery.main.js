@@ -22,6 +22,10 @@ $(function(){
         new FormValidation ( $(this) )
     } );
 
+    $.each( $('.forgot-pass'), function(){
+        new FormValidation ( $(this) )
+    } );
+
     $('.swiper-container').each(function () {
         Slider($(this));
     });
@@ -158,6 +162,28 @@ var FormValidation = function (obj) {
                                 success: function (msg) {
                                     $('.enroll__form').addClass('success');
                                     $('.enroll__thanks').addClass('success');
+                                },
+                                error: function (XMLHttpRequest) {
+                                    if (XMLHttpRequest.statusText != "abort") {
+                                        alert(XMLHttpRequest.statusText);
+                                    }
+                                }
+                            });
+                            return false;
+                        }
+
+                        if (_obj.hasClass('forgot-pass')) {
+                            $.ajax({
+                                url: _action,
+                                dataType: 'html',
+                                timeout: 20000,
+                                type: "GET",
+                                data: {
+                                    enroll: 'true',
+                                    email: $('#forgot-pass__email').val()
+                                },
+                                success: function (msg) {
+                                    $('.forgot-pass__message').addClass('success');
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
