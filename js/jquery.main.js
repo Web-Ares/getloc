@@ -278,7 +278,9 @@ var FormValidation = function (obj) {
                                     password: $('#password2').val()
                                 },
                                 success: function () {
-                                    console.log('dddd')
+
+                                    new Popup($(this));
+
                                     popup.core.show( 'end-registry' );
 
                                 },
