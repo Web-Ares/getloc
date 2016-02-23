@@ -244,8 +244,8 @@ var FormValidation = function (obj) {
 
                                     var curItem = $(this);
                                     popups.contents.css( 'display', '' );
-                                    popups.core.setPopupContent( curItem.attr( 'data-popup' ) );
-                                    return false;
+                                    popups.core.setPopupContent( curItem.data( 'popup' ) );
+                                    console.log(curItem)
 
                                 },
                                 error: function (XMLHttpRequest) {
