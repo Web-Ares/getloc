@@ -18,6 +18,11 @@
 
     }
 
+    if ($_GET['registry'] == true) {
+
+        echo $name, $email, $password;
+
+    }
 
     exit;
 ?>

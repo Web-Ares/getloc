@@ -265,6 +265,32 @@ var FormValidation = function (obj) {
                             return false;
                         }
 
+                        if (_obj.hasClass('popup__registry')) {
+                            $.ajax({
+                                url: _action,
+                                dataType: 'html',
+                                timeout: 20000,
+                                type: "GET",
+                                data: {
+                                    registry: 'true',
+                                    name: $('#name').val(),
+                                    email: $('#email2').val(),
+                                    password: $('#password2').val()
+                                },
+                                success: function () {
+
+                                    popup.core.show('popup__end-registry');
+
+                                },
+                                error: function (XMLHttpRequest) {
+                                    if (XMLHttpRequest.statusText != "abort") {
+                                        alert(XMLHttpRequest.statusText);
+                                    }
+                                }
+                            });
+                            return false;
+                        }
+
                     } else {
                         return false;
 
