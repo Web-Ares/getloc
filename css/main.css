@@ -1856,6 +1856,7 @@ a.social-ok{
 
 }
 /* ------------ /gallery ------------ */
+
 /* ------------------ popup ------------------- */
 .popup {
     position: fixed;
@@ -2087,20 +2088,98 @@ a.social-ok{
 }
 /*--------------/forgot-pass--------------*/
 
-/*-------------program------------*/
-.program{
-    position: relative;
-    padding-bottom: 136px;
-    color:#333333;
+/*--------------site_txt--------------*/
+.site_txt{
+    padding-top: 53px;
 }
-.program__title{
+.site_txt h1{
     margin: 33px 0 56px;
     font-size: 30px;
     font-weight: 400;
     line-height: 21px;
     text-align: center;
 }
-.program__question{
+.site_txt h2{
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.site_txt ul{
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 40px;
+}
+.site_txt li{
+    position: relative;
+    margin-left: -1px;
+    line-height: 24px;
+}
+.site_txt p{
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 7px;
+}
+.site_txt a{
+    font-size: 14px;
+    color: #18baea;
+    font-weight: 100;
+    text-decoration: underline;
+}
+.site_txt a:hover{
+    text-decoration: none;
+}
+.site_txt span{
+    display: block;
+    line-height: 24px;
+}
+.site_txt table{
+     margin: 24px 0 25px;
+     text-align: center;
+ }
+.site_txt table th{
+    vertical-align: middle;
+    height: 62px;
+    color: #fff;
+    background: #8e9298;
+    border: 1px solid #b0b3b7;
+    font-weight: 100;
+}
+.site_txt table tr:first-child th{
+    width: 230px;
+    height: 41px;
+    font-weight: 500;
+}
+.site_txt table tr:first-child th:first-child{
+    width: 200px;
+}
+.site_txt table tr:last-child th:nth-child(odd){
+    width: 92px;
+}
+.site_txt table tr td{
+    padding: 11px 0;
+    border: 1px solid #e3e5e8;
+    font-weight: 100;
+    color: #333;
+}
+.site_txt table tbody tr{
+    background: #f7f7f8;
+}
+.site_txt table tbody tr:nth-child(odd){
+    background: #eeeff0;
+}
+.site_txt table tbody tr td:first-child{
+    padding-left: 16px;
+    text-align: left;
+}
+/*--------------/site_txt--------------*/
+
+/*-------------program------------*/
+.partners-program{
+    position: relative;
+    padding-bottom: 136px;
+    color:#333333;
+}
+.partners-program__question{
     display: inline-block;
     vertical-align: top;
     width: 664px;
@@ -2109,47 +2188,27 @@ a.social-ok{
     color: #333;
     text-align: left;
 }
-.program__sign-up{
+.partners-program__sign-up{
     position: absolute;
     display: inline-block;
     vertical-align: top;
     width:240px;
 }
-.program-fix {
+.partners-program-fix {
     position: fixed;
     top: 112px;
     transform: translateY(0);
     -webkit-transform: translateY(0);
 }
-.program-absolute{
+.partners-program-absolute{
     position: absolute;
     top: auto;
     bottom: 80px;
 }
-.program__question-title{
-    margin-bottom: 10px;
-    font-size: 18px;
-    font-weight: 500;
-}
-.program__sign-up .program__question-title {
+.partners-program__sign-up h2 {
     margin-bottom: 26px;
 }
-.program ul{
-    list-style-type: disc;
-    list-style-position: inside;
-    margin-bottom: 40px;
-}
-.program li{
-    position: relative;
-    margin-left: -1px;
-    line-height: 24px;
-}
-.program p{
-    font-size: 14px;
-    line-height: 24px;
-    margin-bottom: 7px;
-}
-.program__btn{
+.partners-program__btn{
     width: 100%;
     padding: 15px 0;
     margin-top: 17px;
@@ -2162,24 +2221,24 @@ a.social-ok{
     transition: background-color .3s ease;
     -webkit-transition: background-color .3s ease;
 }
-.program__btn:hover {
+.partners-program__btn:hover {
     background-color: #ffdd5d;
 }
-.program__sign-up .site__form{
+.partners-program__sign-up .site__form{
     width: 100%;
     margin: 0;
     padding: 0;
     text-align: left;
     border: none;
 }
-.program__sign-up .site__form fieldset {
+.partners-program__sign-up .site__form fieldset {
     margin-bottom: 0;
 }
-.program__sign-up .site__form button[type='submit'] {
+.partners-program__sign-up .site__form button[type='submit'] {
     margin: 18px 0 22px;
     font-weight: 700;
 }
-.program__sign-up input{
+.partners-program__sign-up input{
     width: 100%;
     height: 40px;
     font-size: 14px;
@@ -2187,74 +2246,18 @@ a.social-ok{
     border: 1px solid #d0d0d0;
     margin-bottom: 12px;
 }
-.program__sign-up .error input {
+.partners-program__sign-up .error input {
     border-color: #ff6353;
 }
-.program__sign-up label{
+.partners-program__sign-up label{
     display: block;
     margin-bottom: 3px;
     font-size: 14px;
     color: #cccccc;
     font-weight: 100;
 }
-.program__income{
-    margin: 24px 0 25px;
-    text-align: center;
-}
-.program__income tr th.program__income-title{
-    width: 230px;
-    height: 41px;
-}
-.program__income tr th.program__income-title:first-child{
-    width: 200px;
-}
-.program__income th{
-    vertical-align: middle;
-    height: 62px;
-    color: #fff;
-    background: #8e9298;
-    border: 1px solid #b0b3b7;
-    font-weight: 100;
-}
-th.program__income-title{
-    font-weight: 500;
-}
-.program__income-commission{
-    width: 92px;
-}
-.program__income tr td{
-    padding: 11px 0;
-    border: 1px solid #e3e5e8;
-    font-weight: 100;
-    color: #333;
-}
-.program__income tbody tr{
-    background: #f7f7f8;
-}
-.program__income tbody tr:nth-child(odd){
-    background: #eeeff0;
-}
-.program__work{
+.partners-program__question>div{
     margin-bottom: 41px;
-}
-.program__income tbody tr td:first-child{
-    padding-left: 16px;
-    text-align: left;
-}
-.program__pay{
-
-}
-.program__pay p{
-    margin-bottom: 0;
-}
-.program__more{
-    font-size: 14px;
-    color: #18baea;
-    font-weight: 100;
-    text-decoration: underline;
-}
-.program__more:hover{
-    text-decoration: none;
 }
 /*-------------/program------------*/
 
