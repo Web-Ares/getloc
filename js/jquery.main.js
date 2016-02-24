@@ -6,7 +6,7 @@ $(function(){
         new FormValidation ( $(this) );
     } );
 
-    $.each( $('.program__sign-up'), function(){
+    $.each( $('.partners-program__sign-up'), function(){
         new FormValidation ( $(this) );
     } );
 
@@ -74,14 +74,16 @@ $(function(){
             $('.site__header').removeClass('header-fix');
         }
         if (scrolling > start+50) {
-            $('.program__sign-up').addClass('program-fix')
-        } else {
-            $('.program__sign-up').removeClass('program-fix')
+            $('.partners-program__sign-up').addClass('partners-program-fix')
+        }
+        else {
+            $('.partners-program__sign-up').removeClass('partners-program-fix')
         }
         if($(window).scrollTop() + $(window).height() > $('.site__footer').offset().top - 20) {
-            $('.program__sign-up').addClass('program-absolute')
-        } else {
-            $('.program__sign-up').removeClass('program-absolute')
+            $('.partners-program__sign-up').addClass('partners-program-absolute')
+        }
+        else {
+            $('.partners-program__sign-up').removeClass('partners-program-absolute')
         }
 
     }
@@ -328,7 +330,6 @@ var FormValidation = function (obj) {
                     curItem.closest("fieldset").removeClass('error');
                 }
             });
-
         },
         _init = function () {
             _addEvents();

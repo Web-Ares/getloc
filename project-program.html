@@ -76,25 +76,20 @@
     <!-- /site__header -->
 
     <!-- site__content -->
-    <div class="site__content site_inner">
+    <div class="site__content site_txt">
 
         <!-- site__wrap -->
         <div class="site__wrap">
 
-            <!-- program -->
-            <section class="program">
+            <!-- partners-program -->
+            <section class="partners-program">
 
-                <!-- program__title -->
-                <h1 class="program__title">Партнерская программа</h1>
-                <!-- /program__title -->
+                <h1>Партнерская программа</h1>
 
-                <!-- /program__title -->
-                <div class="program__question">
+                <!-- partners-program__question -->
+                <div class="partners-program__question">
 
-                    <!-- program__question-title -->
-                    <h2 class="program__question-title">Кто может стать нашим партнёром?</h2>
-                    <!-- /program__question-title -->
-
+                    <h2>Кто может стать нашим партнёром?</h2>
                     <ul>
                         <li>Владельцы сайтов (рекомендуемая тематика: туризм, путешествия, региональные порталы, женские сайты, форумы и т.д.);</li>
                         <li>Блогеры;</li>
@@ -103,37 +98,24 @@
                         <li>Турагентства (частые вопросы от турагентств);</li>
                         <li>А также все, кто хочет зарабатывать на продаже авиабилетов.</li>
                     </ul>
-
-                    <!-- program__work -->
-                    <div class="program__work">
-
-                        <!-- program__question-title -->
-                        <h2 class="program__question-title">Как это работает?</h2>
-                        <!-- /program__question-title -->
-
+                    <div>
+                        <h2>Как это работает?</h2>
                         <p>Вы размещаете форму поиска авиабилетов у себя на сайте. Если пользователь заинтересован в покупке авиабилета, а форма отчетливо видна на странице, то он ищет билет, бронирует и покупает его. Вы получаете свою комиссию 50-70% от нашего дохода с проданного авиабилета. Кроме того, мы платим комиссию за бронирование отелей и другие полезные продукты.</p>
                     </div>
-                    <!-- /program__work -->
-
-                    <!-- program__question-title -->
-                    <h2 class="program__question-title">Сколько денег можно заработать на партнерской программе getloc.ru?</h2>
-                    <!-- /program__question-title -->
-
+                    <h2>Сколько денег можно заработать на партнерской программе getloc.ru?</h2>
                     <p>Мы делимся с партнёрами 50-70% дохода, получаемого нами от агентств (в среднем наш доход составляет около 2,2% от стоимости авиабилета).</p>
                     <p>Конкретный процент (50, 60 или 70%) зависит от суммы дохода, получаемого Aviasales.ru с трафика партнёра (за месяц), а также от способа выплаты комиссии:</p>
-
-                    <!-- program__income -->
-                    <table class="program__income">
+                    <table>
                         <thead>
                             <tr>
-                                <th class="program__income-title" rowspan="2">Доход getloc.ru (за месяц)</th>
-                                <th class="program__income-title" colspan="2">Webmoney, Яндекс.Деньги</th>
-                                <th class="program__income-title" colspan="2">PayPal, ePayments, банк</th>
+                                <th rowspan="2">Доход getloc.ru (за месяц)</th>
+                                <th colspan="2">Webmoney, Яндекс.Деньги</th>
+                                <th colspan="2">PayPal, ePayments, банк</th>
                             </tr>
                             <tr>
-                                <th class="program__income-commission">% комиссии</th>
+                                <th>% комиссии</th>
                                 <th>потенциальный заработок</th>
-                                <th class="program__income-commission">% комиссии</th>
+                                <th>% комиссии</th>
                                 <th>потенциальный заработок</th>
                             </tr>
                         </thead>
@@ -168,69 +150,53 @@
                             </tr>
                         </tbody>
                     </table>
-                    <!-- /program__income -->
-
-                    <!-- program__pay -->
-                    <div class="program__pay">
-                        <p>Выплата комиссии производится с 11 по 20 число каждого месяца за предыдущий.</p>
-                        <p>Подробнее о способах выплаты комисси можно узнать
-
-                            <!-- program__more -->
-                            <a class="program__more" href="#">здесь.</a>
-                            <!-- /program__more -->
-
-                        </p>
-                    </div>
-                    <!-- /program__pay -->
+                    <span>Выплата комиссии производится с 11 по 20 число каждого месяца за предыдущий.</span>
+                    <span>Подробнее о способах выплаты комисси можно узнать
+                        <a href="#">здесь.</a>
+                    </span>
 
                 </div>
-                <!-- /program__title -->
+                <!-- /partners-program__question -->
 
-                <!-- program__sign-up -->
-                <div class="program__sign-up">
+                <!-- partners-program__sign-up -->
+                <div class="partners-program__sign-up">
 
                 <form  class="site__form" method="get" action="php/form.php" novalidate>
 
-                    <!-- program__question-title -->
-                    <h2 class="program__question-title">Зарегистрируйтесь сейчас</h2>
-                    <!-- /program__question-title -->
+                    <h2>Зарегистрируйтесь сейчас</h2>
 
                     <fieldset>
                         <label for="organization">Организация</label>
                         <input type="text" name="name" id="organization" required/>
                     </fieldset>
-
                     <fieldset>
                         <label for="contact-person">Контактное лицо</label>
                         <input type="text" name="contact-name" id="contact-person" required/>
                     </fieldset>
-
                     <fieldset>
                         <label for="site">Сайт</label>
                         <input type="text" name="site-name" id="site"/>
                     </fieldset>
-
                     <fieldset>
                         <label for="phone">Телефон</label>
                         <input type="tel" name="phone" id="phone" required/>
                     </fieldset>
-
                     <fieldset>
                         <label for="email">E-mail</label>
                         <input type="email" name="email" id="email" required/>
                     </fieldset>
 
-                    <!-- program__btn -->
-                    <button class="program__btn" type="submit">Стать партнером</button>
-                    <!-- /program__btn -->
+                    <!-- partners-program__btn -->
+                    <button class="partners-program__btn" type="submit">Стать партнером</button>
+                    <!-- /partners-program__btn -->
 
                 </form>
 
                 </div>
-                <!-- /program__sign-up -->
+                <!-- /partners-program__sign-up -->
 
             </section>
-            <!-- /program -->
+            <!-- /partners-program -->
 
         </div>
         <!-- /site__wrap -->
