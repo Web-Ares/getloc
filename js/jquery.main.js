@@ -84,7 +84,6 @@ $(function(){
             $('.program__sign-up').removeClass('program-absolute')
         }
 
-
     }
 
 

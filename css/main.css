@@ -1829,7 +1829,6 @@ a.social-ok{
     left: auto;
     right: -50px;
 }
-
 @keyframes slider__sections-animation {
     from {
         transform: translate(0,-1000px);
@@ -1857,7 +1856,6 @@ a.social-ok{
 
 }
 /* ------------ /gallery ------------ */
-
 /* ------------------ popup ------------------- */
 .popup {
     position: fixed;
@@ -2259,3 +2257,4 @@ th.program__income-title{
     text-decoration: none;
 }
 /*-------------/program------------*/
+
