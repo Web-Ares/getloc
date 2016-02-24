@@ -63,13 +63,24 @@ $(function(){
         scrolling = $(window).scrollTop();
         if (scrolling > start) {
             $('.site__header').addClass('header-fix');
-            $('.program__sign-up').addClass('program-fix')
         }
         else{
             $('.site__header').removeClass('header-fix');
+        }
+        if (scrolling > start+50) {
+            $('.program__sign-up').addClass('program-fix')
+        } else {
             $('.program__sign-up').removeClass('program-fix')
         }
+        if($(window).scrollTop() + $(window).height() > $('.site__footer').offset().top - 20) {
+            $('.program__sign-up').addClass('program-absolute')
+        } else {
+            $('.program__sign-up').removeClass('program-absolute')
+        }
+
+
     }
+
 
     if ( $(".gallery").length ){
         var gallery = $( '.gallery' );

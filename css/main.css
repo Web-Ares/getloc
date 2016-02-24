@@ -2039,14 +2039,9 @@ a.social-ok{
 
 /*-------------program------------*/
 .program{
+    position: relative;
     padding-bottom: 136px;
     color:#333333;
-}
-.program-fix {
-    position: fixed;
-    top: 149px;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
 }
 .program__title{
     margin: 33px 0 56px;
@@ -2065,9 +2060,21 @@ a.social-ok{
     text-align: left;
 }
 .program__sign-up{
+    position: absolute;
     display: inline-block;
     vertical-align: top;
     width:240px;
+}
+.program-fix {
+    position: fixed;
+    top: 112px;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+}
+.program-absolute{
+    position: absolute;
+    top: auto;
+    bottom: 80px;
 }
 .program__question-title{
     margin-bottom: 10px;
@@ -2107,6 +2114,20 @@ a.social-ok{
 }
 .program__btn:hover {
     background-color: #ffdd5d;
+}
+.program__sign-up .site__form{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    border: none;
+}
+.program__sign-up .site__form fieldset {
+    margin-bottom: 0;
+}
+.program__sign-up .site__form button[type='submit'] {
+    margin: 18px 0 22px;
+    font-weight: 700;
 }
 .program__sign-up input{
     width: 100%;
