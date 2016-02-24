@@ -245,12 +245,12 @@ input[type="search"]::-webkit-search-cancel-button {
     margin-bottom: 9px;
 }
 .site__form label {
-    display: block;
-    margin-bottom: 2px;
-    color: #ccc;
-    -webkit-transition: color 0.3s ease;
-    transition: color 0.3s ease;
-}
+     display: block;
+     margin-bottom: 2px;
+     color: #ccc;
+     -webkit-transition: color 0.3s ease;
+     transition: color 0.3s ease;
+ }
 .site__form .focused label {
     color: #333;
 }
@@ -2055,15 +2055,15 @@ a.social-ok{
     text-align: center;
 }
 .forgot-pass__message{
-    display: none;
+    /*display: none;*/
     height: 78px;
     padding-top: 24px;
     line-height: 24px;
-    opacity: 0;
+    /*opacity: 0;
     transform: scale(.8);
     -webkit-transform: scale(.8);
     transition: transform .3s ease, opacity .3s ease;
-    -webkit-transition: transform .3s ease, opacity .3s ease;
+    -webkit-transition: transform .3s ease, opacity .3s ease;*/
 }
 .forgot-pass__message.success{
     transform: scale(1);
