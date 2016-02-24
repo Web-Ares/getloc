@@ -1,3 +1,5 @@
+var popups;
+
 $(function(){
 
     $.each( $('.discount__form'), function(){
@@ -16,7 +18,11 @@ $(function(){
         new FormValidation ( $(this) )
     } );
 
-    $.each( $('.popup__form'), function(){
+    $.each( $('.popup__registry'), function(){
+        new FormValidation ( $(this) )
+    } );
+
+    $.each( $('.forgot-pass'), function(){
         new FormValidation ( $(this) )
     } );
 
@@ -25,7 +31,7 @@ $(function(){
     });
 
     $('.popup').each(function(){
-        new Popup($(this));
+       popups = new Popup($(this));
     });
 
     $('body').delegate( "input", "focus blur", function() {
@@ -177,6 +183,29 @@ var FormValidation = function (obj) {
                             return false;
                         }
 
+                        if (_obj.hasClass('forgot-pass')) {
+                            $.ajax({
+                                url: _action,
+                                dataType: 'html',
+                                timeout: 20000,
+                                type: "GET",
+                                data: {
+                                    enroll: 'true',
+                                    email: $('#forgot-pass__email').val()
+                                },
+                                success: function (msg) {
+
+                                    $('.forgot-pass__message').slideDown(300);
+                                    $('.forgot-pass__message').addClass('success');
+                                },
+                                error: function (XMLHttpRequest) {
+                                    if (XMLHttpRequest.statusText != "abort") {
+                                        alert(XMLHttpRequest.statusText);                                    }
+                                }
+                            });
+                            return false;
+                        }
+
                         if (_obj.hasClass('discount__form')) {
 
                             var selectsVal = [];
@@ -226,10 +255,7 @@ var FormValidation = function (obj) {
                                     email: $('#email').val()
                                 },
                                 success: function (data) {
-                                    popup.core.show('thanks');
-                                    setTimeout(function () {
-                                        popup.core.hide('thanks')
-                                    }, 3000);
+
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
@@ -240,35 +266,26 @@ var FormValidation = function (obj) {
                             return false;
                         }
 
-                        if (_obj.hasClass('popup__form')) {
-
-                            var selectsVal = [];
-
-                            $.each( $('.discount__selects-language select'), function(i){
-                                selectsVal[i] = this.value;
-                            } );
-
+                        if ( _obj.hasClass( 'popup__registry' ) ) {
                             $.ajax({
                                 url: 'php/form.php',
                                 dataType: 'html',
                                 timeout: 20000,
                                 type: "GET",
                                 data: {
-                                    discount: 'true',
-                                    name: $('#popup__name').val(),
-                                    email: $('#popup__email').val(),
-                                    phone: $('#popup__phone').val(),
-                                    address: $('#popup__address').val(),
-                                    language: selectsVal
+                                    registry: 'true',
+                                    name: $('#name').val(),
+                                    email: $('#email2').val(),
+                                    password: $('#password2').val()
                                 },
-                                success: function (data) {
-                                    popup.core.show('thanks');
-                                    setTimeout(function () {
-                                        popup.core.hide('thanks')
-                                    }, 3000);
+                                success: function () {
+
+                                    popups.contents.css( 'display', '' );
+                                    popups.core.setPopupContent( 'end-registry' );
+
                                 },
                                 error: function (XMLHttpRequest) {
-                                    if (XMLHttpRequest.statusText != "abort") {
+                                    if (XMLHttpRequest.statusText != 'abort') {
                                         alert(XMLHttpRequest.statusText);
                                     }
                                 }
@@ -277,6 +294,7 @@ var FormValidation = function (obj) {
                         }
 
                     } else {
+
                         return false;
 
                     }

@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="viewport" content="width=992">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="format-detection" content="address=no">
+
+    <title>project-phrase</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,300,500,700&subset=cyrillic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" href="css/select.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+</head>
+<body>
+
+<!-- site -->
+<div class="site" id="up">
+
+    <!-- /site__header -->
+    <header class="site__header">
+
+        <!-- site__header-layout -->
+        <div class="site__header-layout">
+
+            <!-- logo -->
+            <a href="#" class="logo anchor" data-href="#up">
+                <img src="img/logo.png" width="90" height="26" alt="GETLOC">
+            </a>
+            <!-- /logo -->
+
+            <!-- site__header-inner -->
+            <div class="site__header-inner">
+
+                <!-- header__menu -->
+                <nav class="header__menu">
+                    <a href="#">Возможности</a>
+                    <a href="#">Цены</a>
+                    <a href="#">О проекте</a>
+                </nav>
+                <!-- /header__menu -->
+
+                <!-- btn -->
+                <a class="btn btn_header btn_header-login popup__open" data-popup="login">Войти</a>
+                <!-- /btn -->
+
+                <!-- language -->
+                <div class="language">
+
+                    <!-- language__btn -->
+                    <button class="language__btn">RU</button>
+                    <!-- /language__btn -->
+
+                    <!-- language__list -->
+                    <ul class="language__list">
+                        <li><a href="#">Русский</a></li>
+                        <li><a class="active" href="#">English</a></li>
+                        <li><a href="#">Deutsch</a></li>
+                        <li><a href="#">Español</a></li>
+                    </ul>
+                    <!-- /language__list -->
+
+                </div>
+                <!-- /language -->
+
+            </div>
+            <!-- /site__header-inner -->
+
+        </div>
+        <!-- /site__header-layout -->
+
+    </header>
+    <!-- /site__header -->
+
+    <!-- site__content -->
+    <div class="site__content site_inner">
+
+        <!-- site__wrap -->
+        <div class="site__wrap">
+
+            <!-- forgot-pass -->
+            <div class="forgot-pass">
+
+                <!-- program__title -->
+                <h1 class="site__title">Восстановление пароля</h1>
+                <!-- /program__title -->
+
+                <!-- forgot-pass__message -->
+                <div class="forgot-pass__message">
+
+                    <p>Ссылка на восстановления пароля</p>
+                    <p>отправлена на вашу эл. почту <a href="http://gmail.com">deezout@gmail.com</a></p>
+
+                </div>
+                <!-- /forgot-pass__message -->
+
+                <!-- site__form -->
+                <form method="get" action="#" novalidate class="site__form">
+
+                    <fieldset>
+                        <label for="forgot-pass__email">Эл. почта</label>
+                        <input type="email" name="forgot-pass__email" id="forgot-pass__email" required/>
+                    </fieldset>
+
+                    <button type="submit" name="forgot-pass__send" class="btn btn_3">Восстановить</button>
+
+                </form>
+                <!-- /site__form -->
+
+            </div>
+            <!-- /forgot-pass -->
+
+        </div>
+        <!-- /site__wrap -->
+
+    </div>
+    <!-- /site__content -->
+
+    <!-- /site__footer -->
+    <footer class="site__footer">
+        <!-- /site__footer-layout -->
+        <div class="site__footer-layout">
+
+            <!-- footer__logo -->
+            <div class="footer__logo">
+                <img src="img/logo.png" alt="GETLOC">
+            </div>
+            <!-- /footer__logo -->
+
+            <!-- footer-menu -->
+            <div class="footer-menu">
+                <dl>
+                    <dt>Как это работает?</dt>
+                    <dd>
+                        <a href="#"><span>Наша платформа</span></a>
+                        <a href="#"><span>Управление переводом</span></a>
+                        <a href="#"><span>Заказ перевода</span></a>
+                        <a href="#"><span>Интеграция</span></a>
+                        <a href="#"><span>Планы развити</span></a>
+                    </dd>
+                </dl>
+
+                <dl>
+                    <dt>О нас</dt>
+                    <dd>
+                        <a href="#"><span>Команда проекта</span></a>
+                        <a href="#"><span>Наши клиенты</span></a>
+                        <a href="#"><span>Новости</span></a>
+                    </dd>
+                </dl>
+
+            </div>
+            <!-- /footer-menu -->
+
+            <!-- social -->
+            <div class="social">
+                <a href="#" class="social-vk"></a>
+                <a href="#" class="social-fb"></a>
+                <a href="#" class="social-ok"></a>
+            </div>
+            <!-- /social -->
+
+        </div>
+        <!-- /site__footer-layout -->
+
+    </footer>
+    <!-- /site__footer -->
+
+</div>
+<!-- /site -->
+
+<!-- popup -->
+<div class="popup">
+
+    <!-- popup__wrap -->
+    <div class="popup__wrap">
+
+        <!-- popup__content -->
+        <div class="popup__content popup__content_check popup__login">
+
+            <!-- popup__close -->
+            <button class="popup__close popup__close_small"><span></span></button>
+            <!-- /popup__close -->
+
+            <!-- popup__head -->
+            <div class="popup__head">
+
+                <!-- logo -->
+                <a href="#" class="logo">
+                    <img src="img/logo.png" width="90" height="26" alt="GETLOC">
+                </a>
+                <!-- /logo -->
+
+            </div>
+            <!-- /popup__head -->
+
+            <!-- popup__inner -->
+            <div class="popup__inner">
+
+                <!-- site__form -->
+                <form method="get" class="site__form" novalidate>
+
+                    <!-- site__form-title -->
+                    <span class="site__form-title">Вход</span>
+                    <!-- /site__form-title -->
+
+                    <fieldset>
+                        <label for="email">Ваша эл. почта *</label>
+                        <input type="email" id="email" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" required>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn_enroll">Войти</button>
+
+                    <!-- site__form-forgot -->
+                    <a href="#" class="site__form-forgot">Забыли пароль?</a>
+                    <!-- /site__form-forgot -->
+
+                </form>
+                <!-- /site__form -->
+
+                <!-- popup__social -->
+                <div class="popup__social">
+
+                    Вы можете зайти через соцсети
+
+                    <!-- social-2 -->
+                    <div class="social-2">
+
+                        <!-- social-2__fb -->
+                        <a href="#" class="social-2__fb">facebook</a>
+                        <!-- /social-2__fb -->
+
+                        <!-- social-2__tw -->
+                        <a href="#" class="social-2__tw">twitter</a>
+                        <!-- /social-2__tw -->
+
+                        <!-- social-2__google -->
+                        <a href="#" class="social-2__google">google</a>
+                        <!-- /social-2__google -->
+
+                    </div>
+                    <!-- /social-2 -->
+
+                </div>
+                <!-- /popup__social -->
+
+            </div>
+            <!-- /popup__inner -->
+
+            <!-- popup__footer -->
+            <div class="popup__footer">
+                Нет учётной записи?
+                <a href="#" class="popup__open" data-popup="registry">Зарегистрироваться</a>
+            </div>
+            <!-- /popup__footer -->
+
+        </div>
+        <!-- popup__content -->
+
+        <!-- popup__content -->
+        <div class="popup__content popup__content_check popup__registry">
+
+            <!-- popup__close -->
+            <button class="popup__close popup__close_small"><span></span></button>
+            <!-- /popup__close -->
+
+            <!-- popup__head -->
+            <div class="popup__head">
+
+                <!-- logo -->
+                <a href="#" class="logo">
+                    <img src="img/logo.png" width="90" height="26" alt="GETLOC">
+                </a>
+                <!-- /logo -->
+
+            </div>
+            <!-- /popup__head -->
+
+            <!-- popup__inner -->
+            <div class="popup__inner">
+
+                <!-- site__form -->
+                <form method="get" class="site__form" novalidate>
+
+                    <!-- site__form-title -->
+                    <span class="site__form-title">Регистрация</span>
+                    <!-- /site__form-title -->
+
+                    <fieldset>
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="email2">Ваша эл. почта *</label>
+                        <input type="email" id="email2" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <label for="password2">Пароль</label>
+                        <input type="password" id="password2" required>
+                    </fieldset>
+
+                    <button type="submit" class="btn btn_enroll">Попробовать бесплатно</button>
+
+                </form>
+                <!-- /site__form -->
+
+                <!-- popup__social -->
+                <div class="popup__social">
+
+                    Вы можете зарегистрироваться через соцсети
+
+                    <!-- social-2 -->
+                    <div class="social-2">
+
+                        <!-- social-2__fb -->
+                        <a href="#" class="social-2__fb">facebook</a>
+                        <!-- /social-2__fb -->
+
+                        <!-- social-2__tw -->
+                        <a href="#" class="social-2__tw">twitter</a>
+                        <!-- /social-2__tw -->
+
+                        <!-- social-2__google -->
+                        <a href="#" class="social-2__google">google</a>
+                        <!-- /social-2__google -->
+
+                    </div>
+                    <!-- /social-2 -->
+
+                </div>
+                <!-- /popup__social -->
+
+            </div>
+            <!-- /popup__inner -->
+
+            <!-- popup__footer -->
+            <div class="popup__footer">
+                Уже регистрированы?
+                <a href="#" class="popup__open" data-popup="login">Войти</a>
+            </div>
+            <!-- /popup__footer -->
+
+        </div>
+        <!-- popup__content -->
+
+        <!-- popup__content -->
+        <div class="popup__content popup__content_check popup__end-registry">
+
+            <!-- popup__close -->
+            <button class="popup__close popup__close_small"><span></span></button>
+            <!-- /popup__close -->
+
+            <!-- popup__head -->
+            <div class="popup__head">
+
+                <!-- logo -->
+                <a href="#" class="logo">
+                    <img src="img/logo.png" width="90" height="26" alt="GETLOC">
+                </a>
+                <!-- /logo -->
+
+            </div>
+            <!-- /popup__head -->
+
+            <!-- popup__inner -->
+            <div class="popup__inner">
+
+                <!-- site__form-title -->
+                <span class="site__form-title">Подтверждение регистрации</span>
+                <!-- /site__form-title -->
+
+                <div class="end-registry">
+
+                    <p>Для завершения регистрации подтвердите свою почту <a href="http://gmail.com">deezout@gmail.com</a></p>
+
+                </div>
+
+                <a href="#" class="btn btn_3">Подтвердить</a>
+
+            </div>
+            <!-- /popup__inner -->
+
+        </div>
+        <!-- popup__content -->
+
+    </div>
+    <!-- /popup__wrap -->
+</div>
+<!-- /popup -->
+
+<script src="js/jquery-2.1.3.min.js"></script>
+<script src="js/jquery.nicescroll.min.js"></script>
+<script src="js/jquery.select.js"></script>
+<script src="js/jquery.main.js"></script>
+</body>
+</html>
