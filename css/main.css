@@ -2047,14 +2047,14 @@ a.social-ok{
 }
 /* ----------------- end-registry ------------------- */
 
-/*--------------forgot-pass--------------*/
-.forgot-pass{
+/*--------------forgot-password--------------*/
+.forgot-password{
     width: 400px;
     margin: 0 auto;
     padding-top: 24px;
     text-align: center;
 }
-.forgot-pass__message{
+.forgot-password__message{
     /*display: none;*/
     height: 78px;
     padding-top: 24px;
@@ -2065,27 +2065,27 @@ a.social-ok{
     transition: transform .3s ease, opacity .3s ease;
     -webkit-transition: transform .3s ease, opacity .3s ease;*/
 }
-.forgot-pass__message.success{
+.forgot-password__message.success{
     transform: scale(1);
     -webkit-transform: scale(1);
     opacity: 1;
 }
-.forgot-pass__message a{
+.forgot-password__message a{
     color: #18baea;
     text-decoration: underline;
 }
-.forgot-pass input{
+.forgot-password input{
     display: block;
     margin-bottom: -11px;
     border: 1px solid #d0d0d0;
     border-radius: 5px;
 }
-.forgot-pass .site__form{
+.forgot-password .site__form{
     margin: 0 0 20px;
     padding-top: 23px;
     border-bottom: 0;
 }
-/*--------------/forgot-pass--------------*/
+/*--------------/forgot-password--------------*/
 
 /*-------------program------------*/
 .program{

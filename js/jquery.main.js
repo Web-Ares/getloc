@@ -22,7 +22,7 @@ $(function(){
         new FormValidation ( $(this) )
     } );
 
-    $.each( $('.forgot-pass'), function(){
+    $.each( $('.forgot-password'), function(){
         new FormValidation ( $(this) )
     } );
 
@@ -182,7 +182,7 @@ var FormValidation = function (obj) {
                             return false;
                         }
 
-                        if (_obj.hasClass('forgot-pass')) {
+                        if (_obj.hasClass('forgot-password')) {
                             $.ajax({
                                 url: _action,
                                 dataType: 'html',
@@ -190,12 +190,12 @@ var FormValidation = function (obj) {
                                 type: "GET",
                                 data: {
                                     enroll: 'true',
-                                    email: $('#forgot-pass__email').val()
+                                    email: $('#forgot-password__email').val()
                                 },
                                 success: function (msg) {
 
-                                    $('.forgot-pass__message').slideDown(300);
-                                    $('.forgot-pass__message').addClass('success');
+                                    $('.forgot-password__message').slideDown(300);
+                                    $('.forgot-password__message').addClass('success');
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
