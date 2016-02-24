@@ -2090,7 +2090,9 @@ a.social-ok{
 
 /*--------------site_txt--------------*/
 .site_txt{
-    padding-top: 53px;
+    width: 992px;
+    padding: 53px 20px 0;
+    margin: 0 auto;
 }
 .site_txt h1{
     margin: 33px 0 56px;
