@@ -2109,7 +2109,6 @@ a.social-ok{
 .site_txt ul{
     list-style-type: disc;
     list-style-position: inside;
-    margin-bottom: 40px;
 }
 .site_txt li{
     position: relative;
@@ -2199,8 +2198,6 @@ a.social-ok{
 .partners-program-fix {
     position: fixed;
     top: 112px;
-    transform: translateY(0);
-    -webkit-transform: translateY(0);
 }
 .partners-program-absolute{
     position: absolute;
