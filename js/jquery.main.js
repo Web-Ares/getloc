@@ -241,7 +241,7 @@ var FormValidation = function (obj) {
                             return false;
                         }
 
-                        if (_obj.hasClass('program__sign-up')) {
+                        if (_obj.hasClass('partners-program__sign-up')) {
 
                             $.ajax({
                                 url: 'php/form.php',
