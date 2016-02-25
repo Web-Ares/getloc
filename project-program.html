@@ -158,7 +158,18 @@
                 <!-- partners-program__sign-up -->
                 <div class="partners-program__sign-up">
 
-                <form  class="site__form" method="get" action="php/form.php" novalidate>
+                    <!-- add-code__successfully -->
+                    <div class="partners-program__successfully">
+
+                        <!-- add-code__pic -->
+                        <div class="partners-program__pic" style="background-image: url(img/create-s.png)"></div>
+                        <!-- /add-code__pic -->
+
+                        <span>Желаем вам приятной работы с нашим сервисом?</span>
+                    </div>
+                    <!-- /add-code__successfully -->
+
+                <form  class="site__form partners-program_form" method="get" action="php/form.php" novalidate>
 
                     <h2>Зарегистрируйтесь сейчас</h2>
 
@@ -172,7 +183,7 @@
                     </fieldset>
                     <fieldset>
                         <label for="site">Сайт</label>
-                        <input type="text" name="site-name" id="site"/>
+                        <input type="text" name="site-name" id="site" required/>
                     </fieldset>
                     <fieldset>
                         <label for="phone">Телефон</label>

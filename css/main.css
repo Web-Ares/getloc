@@ -2205,7 +2205,7 @@ a.social-ok{
 .partners-program-absolute{
     position: absolute;
     top: auto;
-    bottom: 80px;
+    bottom: 20px;
 }
 .partners-program__sign-up h2 {
     margin-bottom: 26px;
@@ -2260,6 +2260,43 @@ a.social-ok{
 }
 .partners-program__question>div{
     margin-bottom: 41px;
+}
+.partners-program__successfully{
+    position: absolute;
+    width: 100%;
+    padding-top: 16px;
+    text-align: center;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+}
+.partners-program__successfully.success{
+    opacity: 1;
+    visibility: visible;
+}
+.partners-program__pic{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 34px;
+    background: no-repeat center;
+}
+.partners-program__successfully span{
+    display: block;
+    margin: 0 37px 25px;
+    line-height: 23px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.partners-program_form{
+    transition: opacity .3s ease, visibility .3s ease;
+    -webkit-transition: opacity .3s ease, visibility .3s ease;
+}
+.partners-program_form.success{
+    opacity: 0;
+    visibility: hidden;
 }
 /*-------------/program------------*/
 

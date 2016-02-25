@@ -79,7 +79,7 @@ $(function(){
         else {
             $('.partners-program__sign-up').removeClass('partners-program-fix')
         }
-        if($(window).scrollTop() + $(window).height() > $('.site__footer').offset().top - 20) {
+        if($(window).scrollTop() + $(window).height() > $('.site__footer').offset().top+40) {
             $('.partners-program__sign-up').addClass('partners-program-absolute')
         }
         else {
@@ -244,19 +244,21 @@ var FormValidation = function (obj) {
                         if (_obj.hasClass('program__sign-up')) {
 
                             $.ajax({
-                                url: 'php/program-send.php',
+                                url: 'php/form.php',
                                 dataType: 'html',
                                 timeout: 20000,
                                 type: "GET",
                                 data: {
+                                    send: 'true',
                                     organization: $('#organization').val(),
                                     name: $('#contact-person').val(),
                                     site: $('#site').val(),
                                     phone: $('#phone').val(),
                                     email: $('#email').val()
                                 },
-                                success: function (data) {
-
+                                success: function () {
+                                    $('.partners-program_form').addClass('success');
+                                    $('.partners-program__successfully').addClass('success');
                                 },
                                 error: function (XMLHttpRequest) {
                                     if (XMLHttpRequest.statusText != "abort") {
