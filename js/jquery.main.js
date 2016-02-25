@@ -723,7 +723,7 @@ var AsideForm = function (obj) {
         _windowHeight,
         _windowScroll,
         _footerTop,
-        _objForm;
+        _startTop;
 
     var _addEvents = function () {
 
@@ -737,27 +737,21 @@ var AsideForm = function (obj) {
         _calculateTop = function(){
 
             _objHeight = _obj.height();
+            _objTop = _obj.offset().top;
             _windowHeight = _window.height();
             _windowScroll = _window.scrollTop();
             _footerTop = _footer.offset().top;
-            _objTop = _obj.offset().top;
-            _objForm=_objTop+_objHeight;
+            _startTop = $(".site__header").offset().top + $(".site__header").outerHeight();
 
 
-            //var sum = _objTop+_objHeight+40;
-            //console.log(sum +"="+ _footerTop )
-
-            if (_footerTop - _objForm < 40 && _windowScroll + _windowHeight > _footerTop -40  ){
-
-                _obj.addClass( 'partners-program-absolute' );
-            }
-            else {
+            if ((_objTop + _startTop) > _windowScroll){
                 _obj.removeClass( 'partners-program-absolute' );
+
+                if ((_windowScroll + _objHeight) > (_footerTop - 137)) {
+                    _obj.addClass( 'partners-program-absolute' );
+                }
+
             }
-
-
-
-            console.log( _objHeight, _windowHeight, _windowScroll, _footerTop, _objTop );
 
         },
         _init = function () {
