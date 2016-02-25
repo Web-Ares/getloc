@@ -26,6 +26,10 @@ $(function(){
         new FormValidation ( $(this) )
     } );
 
+    $.each( $('.partners-program__sign-up'), function(){
+        new AsideForm ( $(this) );
+    } );
+
     $('.swiper-container').each(function () {
         Slider($(this));
     });
@@ -77,14 +81,16 @@ $(function(){
             $('.partners-program__sign-up').addClass('partners-program-fix')
         }
         else {
+
             $('.partners-program__sign-up').removeClass('partners-program-fix')
+
         }
-        if($(window).scrollTop() + $(window).height() > $('.site__footer').offset().top+40) {
-            $('.partners-program__sign-up').addClass('partners-program-absolute')
-        }
-        else {
-            $('.partners-program__sign-up').removeClass('partners-program-absolute')
-        }
+        //if($('.partners-program__sign-up').offset().top+40 > $('.site__footer').offset().top+40) {
+        //    $('.partners-program__sign-up').addClass('partners-program-absolute')
+        //}
+        //else {
+        //    $('.partners-program__sign-up').removeClass('partners-program-absolute')
+        //}
 
     }
 
@@ -706,4 +712,57 @@ Popup.prototype = {
 
         };
     }
+};
+
+var AsideForm = function (obj) {
+    var _obj = obj,
+        _objHeight,
+        _objTop,
+        _window = $( window ),
+        _footer = $( '.site__footer' ),
+        _windowHeight,
+        _windowScroll,
+        _footerTop,
+        _objForm;
+
+    var _addEvents = function () {
+
+            _window.on({
+                scroll: function(){
+                    _calculateTop();
+                }
+            })
+
+        },
+        _calculateTop = function(){
+
+            _objHeight = _obj.height();
+            _windowHeight = _window.height();
+            _windowScroll = _window.scrollTop();
+            _footerTop = _footer.offset().top;
+            _objTop = _obj.offset().top;
+            _objForm=_objTop+_objHeight;
+
+
+            //var sum = _objTop+_objHeight+40;
+            //console.log(sum +"="+ _footerTop )
+
+            if (_footerTop - _objForm < 40 && _windowScroll + _windowHeight > _footerTop -40  ){
+
+                _obj.addClass( 'partners-program-absolute' );
+            }
+            else {
+                _obj.removeClass( 'partners-program-absolute' );
+            }
+
+
+
+            console.log( _objHeight, _windowHeight, _windowScroll, _footerTop, _objTop );
+
+        },
+        _init = function () {
+            _addEvents();
+        };
+
+    _init();
 };
